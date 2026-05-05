@@ -32,7 +32,10 @@
     <link rel="stylesheet" href="styles.css" />
     <script>
       try {
-        if (sessionStorage.getItem("miyaVisitorProfile")) {
+        if (
+          sessionStorage.getItem("miyaVisitorProfile") ||
+          sessionStorage.getItem("miyaVisitorDismissed")
+        ) {
           document.documentElement.classList.add("vibe-skip-gate");
         }
       } catch (e) {}
@@ -47,11 +50,19 @@
       aria-labelledby="vibe-title"
     >
       <div class="vibe-gate-card">
+        <button
+          type="button"
+          class="vibe-gate-close"
+          id="vibe-gate-close"
+          aria-label="Skip personalization"
+        >
+          ×
+        </button>
         <p class="vibe-gate-badge">Preview feature</p>
         <h2 id="vibe-title">Make this site feel like you</h2>
         <p class="vibe-gate-lede">
-          A quick hello—we’ll match colors &amp; type to your vibe and weave your
-          first name into the page (stored only in this browser session).
+          Optional—we’ll match colors &amp; type and use your first name on the
+          page (saved only for this browser session). Or skip below.
         </p>
         <form id="vibe-form" class="vibe-form" novalidate>
           <label class="vibe-field">
@@ -86,6 +97,9 @@
           <button type="submit" class="btn btn-primary vibe-submit">
             See my personalized site
           </button>
+          <button type="button" class="vibe-gate-skip" id="vibe-gate-skip-text">
+            No thanks — show the standard site
+          </button>
         </form>
       </div>
     </div>
@@ -107,17 +121,23 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">
+            <p class="eyebrow copy-if-personal">
               Hi, <span data-p-name></span> · residential redevelopment
             </p>
+            <p class="eyebrow copy-if-generic">Residential redevelopment</p>
             <h1>
               Homes flipped with intention—
               <em>not</em> just for the market, for the neighborhood.
             </h1>
-            <p class="lede">
+            <p class="lede copy-if-personal">
               Thanks for stopping by, <span data-p-name></span>. Miya Wilson buys
               tired properties, reimagines them with quality finishes, and brings
               well-designed homes back to your community.
+            </p>
+            <p class="lede copy-if-generic">
+              Thanks for stopping by. Miya Wilson buys tired properties,
+              reimagines them with quality finishes, and brings well-designed homes
+              back to your community.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Discuss a project</a>
@@ -177,10 +197,14 @@
               />
             </div>
             <h2>Transform</h2>
-            <p>
+            <p class="copy-if-personal">
               When you’re browsing with us, <span data-p-name></span>, picture
               floor plans and finishes that feel timeless—so the next owner falls
               in love at first showing.
+            </p>
+            <p class="copy-if-generic">
+              When you browse with us, picture floor plans and finishes that feel
+              timeless—so the next owner falls in love at first showing.
             </p>
           </article>
           <article class="pillar">
@@ -208,8 +232,9 @@
           <div class="feature-copy">
             <p class="eyebrow">Featured transformation</p>
             <h2>
-              <span data-p-name></span>, here’s before &amp; after energy that
-              sells
+              <span class="copy-if-personal"><span data-p-name></span>, here’s
+                before &amp; after energy that sells</span
+              ><span class="copy-if-generic">Here’s before &amp; after energy that sells</span>
             </h2>
             <p>
               This mock project highlights open living, a reconfigured kitchen,
@@ -274,9 +299,13 @@
             <li>
               <span class="step-num">01</span>
               <h3>Discovery</h3>
-              <p>
+              <p class="copy-if-personal">
                 We review the property, numbers, and timeline together—your
                 questions, <span data-p-name></span>, always welcome.
+              </p>
+              <p class="copy-if-generic">
+                We review the property, numbers, and timeline together—your questions
+                are always welcome.
               </p>
             </li>
             <li>
@@ -296,7 +325,11 @@
       <section class="cta" id="contact">
         <div class="wrap cta-inner">
           <div>
-            <h2><span data-p-name></span>, have a lead or a property in mind?</h2>
+            <h2>
+              <span class="copy-if-personal"
+                ><span data-p-name></span>, have a lead or a property in mind?</span
+              ><span class="copy-if-generic">Have a lead or a property in mind?</span>
+            </h2>
             <p class="cta-sub">
               Off-market opportunities, wholesaler introductions, and
               collaboration welcome—reach out and we’ll respond within one
