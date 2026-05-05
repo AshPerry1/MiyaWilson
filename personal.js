@@ -40,10 +40,10 @@
 
   function vibeClass(gender) {
     const map = {
+      female: "vibe-woman",
+      male: "vibe-man",
       woman: "vibe-woman",
       man: "vibe-man",
-      nonbinary: "vibe-nb",
-      "prefer-not": "vibe-neutral",
     };
     return map[gender] || "vibe-neutral";
   }
