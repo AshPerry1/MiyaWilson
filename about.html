@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="About Move Well—meet the flipper behind the renovations, values, and how we partner on every project."
+    />
+    <title>About me · Move Well</title>
+    <script>
+      (function () {
+        if (
+          location.hostname === "ashperry1.github.io" &&
+          location.pathname.startsWith("/MiyaWilson")
+        ) {
+          var b = document.createElement("base");
+          b.href = "/MiyaWilson/";
+          var t = document.querySelector("title");
+          if (t) document.head.insertBefore(b, t);
+          else document.head.appendChild(b);
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html"
+          ><span class="logo-line1">Move</span><span class="logo-line2">Well</span></a
+        >
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html" class="nav-current" aria-current="page">About me</a>
+          <a href="index.html#work">Projects</a>
+          <a href="index.html#process">How it works</a>
+          <a href="index.html#contact" class="nav-cta">
+            Let’s talk<span class="nav-name-hook">, <span data-p-name></span></span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-about-main">
+      <section class="about-pink about-pink--page" aria-labelledby="about-heading">
+        <div class="about-pink__blobs" aria-hidden="true">
+          <span class="about-pink__blob about-pink__blob--1"></span>
+          <span class="about-pink__blob about-pink__blob--2"></span>
+          <span class="about-pink__blob about-pink__blob--3"></span>
+        </div>
+        <div class="wrap about-pink__inner">
+          <div class="about-pink__copy">
+            <p class="about-pink__eyebrow">About me</p>
+            <h1 id="about-heading">The person behind Move Well</h1>
+            <p class="about-pink__lede">
+              I’m a full-time home flipper with a soft spot for forgotten floor plans
+              and kitchens that deserve a second act. Move Well started as a promise
+              to myself: every project should feel calm, honest, and a little bit
+              brave—just like the families who’ll live there next.
+            </p>
+            <p>
+              When I’m not on a job site, I’m sketching tile layouts, hunting vintage
+              hardware, or walking neighborhoods with my notebook and way too much
+              coffee. I partner with trusted trades, keep communication tight, and
+              treat your timeline like it’s my own.
+            </p>
+            <p class="about-pink__tagline">
+              <strong>Movement matters</strong>—whether it’s a wall that slides open
+              or a first-time buyer finally getting keys.
+            </p>
+          </div>
+          <figure class="about-pink__photo">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=640&amp;h=800&amp;q=82"
+              width="640"
+              height="800"
+              alt="Portrait mockup for Move Well founder (preview photo)"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="about-pink__caption">
+              Founder · Move Well (preview)
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about-next">
+        <div class="wrap about-next__inner">
+          <p class="about-next__lede">
+            Want to see how we flip a house from intake to staging?
+          </p>
+          <a class="btn btn-primary" href="index.html#work">Explore projects</a>
+          <a class="btn btn-ghost about-next__btn-ghost" href="index.html#contact"
+            >Get in touch</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p class="footer-brand">Move Well · Home Transformations</p>
+        <p class="footer-meta">© <span id="y"></span> · Mock preview site</p>
+        <p class="footer-credit">Created by Ash Perry</p>
+        <p class="footer-photos">
+          Photos for this mock preview from
+          <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer"
+            >Unsplash</a
+          >
+          photographers.
+        </p>
+        <p class="footer-reset-wrap">
+          <button type="button" class="footer-reset" data-reset-vibe>
+            Reset personalization
+          </button>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="personal.js" defer></script>
+  </body>
+</html>

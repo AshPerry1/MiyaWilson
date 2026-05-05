@@ -28,7 +28,7 @@ jobs:
       - name: Collect static files
         run: |
           mkdir -p _site
-          cp index.html styles.css personal.js _site/
+          cp index.html about.html styles.css personal.js _site/
           test -f .nojekyll && cp .nojekyll _site/ || touch _site/.nojekyll
 
       - name: Configure Pages

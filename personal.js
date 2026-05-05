@@ -34,6 +34,11 @@
     }
   }
 
+  function pageIsAbout() {
+    var p = location.pathname || "";
+    return p.indexOf("about.html") !== -1;
+  }
+
   function saveDismissed() {
     try {
       sessionStorage.setItem(DISMISS_KEY, "1");
@@ -106,7 +111,7 @@
     document.body.classList.add("personalization-opted-out");
     document.documentElement.classList.add("vibe-skip-gate");
     const titleEl = document.querySelector("title");
-    if (titleEl) {
+    if (titleEl && !pageIsAbout()) {
       titleEl.textContent = "Move Well · Home Transformations";
     }
     setGateVisible(false);
@@ -134,7 +139,9 @@
     document.documentElement.classList.add("vibe-skip-gate");
     const titleEl = document.querySelector("title");
     if (titleEl) {
-      titleEl.textContent = "Move Well · Home Transformations · " + display;
+      titleEl.textContent = pageIsAbout()
+        ? "About me · Move Well · " + display
+        : "Move Well · Home Transformations · " + display;
     }
     setGateVisible(false);
   }
@@ -198,7 +205,7 @@
       document.body.classList.add("personalization-opted-out");
       document.documentElement.classList.add("vibe-skip-gate");
       setGateVisible(false);
-    } else {
+    } else if (document.getElementById("vibe-gate")) {
       setGateVisible(true);
     }
   });
