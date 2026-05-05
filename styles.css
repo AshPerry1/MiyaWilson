@@ -158,11 +158,46 @@ a {
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.35rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   color: var(--ink);
+}
+
+.logo-line1 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.logo-line2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+@media (min-width: 480px) {
+  .logo {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .logo-line1 {
+    font-size: 1.25rem;
+  }
+
+  .logo-line2 {
+    font-style: normal;
+    font-weight: 600;
+  }
 }
 
 .nav {
@@ -196,9 +231,9 @@ a {
   box-shadow: 0 8px 22px rgba(var(--ink-rgb), 0.18);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .nav {
-    gap: 1rem;
+    gap: 0.65rem;
   }
 
   .nav a:not(.nav-cta) {
@@ -408,6 +443,190 @@ a {
   padding: 0 1.5rem;
   color: var(--ink-muted);
   font-size: 0.98rem;
+}
+
+/* —— About me (pink spectrum) —— */
+.about-pink {
+  position: relative;
+  padding: clamp(3.5rem, 9vw, 5.75rem) 0;
+  overflow: hidden;
+  background: linear-gradient(
+    165deg,
+    #fff5f9 0%,
+    #ffe4ef 16%,
+    #ffc9dd 34%,
+    #f5a6c4 48%,
+    #e89bb4 62%,
+    #f4c6d6 78%,
+    #fce7f3 100%
+  );
+}
+
+.about-pink__blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.about-pink__blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.about-pink__blob--1 {
+  width: min(440px, 58vw);
+  height: min(440px, 58vw);
+  background: radial-gradient(
+    circle,
+    #ff5ca7 0%,
+    #ffb3d4 45%,
+    transparent 70%
+  );
+  top: -12%;
+  right: -14%;
+  filter: blur(1px);
+}
+
+.about-pink__blob--2 {
+  width: min(380px, 50vw);
+  height: min(380px, 50vw);
+  background: radial-gradient(
+    circle,
+    #db2777 0%,
+    #fda4c6 50%,
+    transparent 72%
+  );
+  bottom: 0;
+  left: -15%;
+  opacity: 0.42;
+}
+
+.about-pink__blob--3 {
+  width: min(300px, 42vw);
+  height: min(300px, 42vw);
+  background: radial-gradient(
+    circle,
+    #fdf2f8 0%,
+    #fbcfe8 55%,
+    transparent 68%
+  );
+  top: 38%;
+  left: 18%;
+  opacity: 0.85;
+}
+
+.about-pink__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.82fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .about-pink__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-pink__photo {
+    order: -1;
+  }
+}
+
+.about-pink__copy {
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 2rem 2.35rem;
+  border-radius: 22px;
+  border: 1px solid rgba(236, 72, 153, 0.32);
+  box-shadow:
+    0 8px 40px rgba(157, 23, 77, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.about-pink__eyebrow {
+  margin: 0 0 0.65rem;
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #be185d;
+}
+
+.about-pink__copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.95rem, 4vw, 2.65rem);
+  font-weight: 600;
+  line-height: 1.12;
+  margin: 0 0 1.2rem;
+  color: #831843;
+}
+
+.about-pink__lede {
+  font-size: 1.08rem;
+  color: #6b2144;
+  margin: 0 0 1.05rem !important;
+  line-height: 1.6;
+}
+
+.about-pink__copy p:not(.about-pink__eyebrow):not(.about-pink__lede) {
+  margin: 0 0 0.95rem;
+  color: #5c2b45;
+  line-height: 1.68;
+}
+
+.about-pink__tagline {
+  margin-top: 1.35rem !important;
+  padding: 1.05rem 1.25rem;
+  margin-bottom: 0 !important;
+  border-radius: 16px;
+  background: linear-gradient(
+    105deg,
+    rgba(251, 207, 232, 0.75) 0%,
+    rgba(252, 231, 243, 0.95) 55%,
+    rgba(251, 113, 133, 0.12) 100%
+  );
+  border: 1px solid rgba(244, 114, 182, 0.35);
+  color: #701a40 !important;
+}
+
+.about-pink__tagline strong {
+  color: #9f1239;
+}
+
+.about-pink__photo {
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 28px 55px rgba(131, 24, 67, 0.25),
+    0 0 0 1px rgba(251, 113, 133, 0.4);
+  background: linear-gradient(180deg, #fce7f3, #fbcfe8);
+}
+
+.about-pink__photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.about-pink__caption {
+  display: block;
+  padding: 0.7rem 1rem 0.95rem;
+  font-size: 0.82rem;
+  text-align: center;
+  font-weight: 500;
+  color: #831843;
+  background: linear-gradient(180deg, #fdf2f8, #fbcfe8);
+  border-top: 1px solid rgba(236, 72, 153, 0.2);
 }
 
 /* —— Feature / before-after —— */

@@ -107,7 +107,7 @@
     document.documentElement.classList.add("vibe-skip-gate");
     const titleEl = document.querySelector("title");
     if (titleEl) {
-      titleEl.textContent = "Miya Wilson · Home Transformations";
+      titleEl.textContent = "Move Well · Home Transformations";
     }
     setGateVisible(false);
   }
@@ -134,7 +134,7 @@
     document.documentElement.classList.add("vibe-skip-gate");
     const titleEl = document.querySelector("title");
     if (titleEl) {
-      titleEl.textContent = "Miya Wilson · Home Transformations · " + display;
+      titleEl.textContent = "Move Well · Home Transformations · " + display;
     }
     setGateVisible(false);
   }
