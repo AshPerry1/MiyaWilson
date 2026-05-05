@@ -11,35 +11,100 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&family=Syne:wght@500;600&family=Work+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (sessionStorage.getItem("miyaVisitorProfile")) {
+          document.documentElement.classList.add("vibe-skip-gate");
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
+    <div
+      id="vibe-gate"
+      class="vibe-gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="vibe-title"
+    >
+      <div class="vibe-gate-card">
+        <p class="vibe-gate-badge">Preview feature</p>
+        <h2 id="vibe-title">Make this site feel like you</h2>
+        <p class="vibe-gate-lede">
+          A quick hello—we’ll match colors &amp; type to your vibe and weave your
+          first name into the page (stored only in this browser session).
+        </p>
+        <form id="vibe-form" class="vibe-form" novalidate>
+          <label class="vibe-field">
+            <span class="vibe-label">Your name</span>
+            <input
+              type="text"
+              name="name"
+              required
+              autocomplete="name"
+              placeholder="First name or full name"
+            />
+          </label>
+          <label class="vibe-field">
+            <span class="vibe-label">Gender</span>
+            <select name="gender" required>
+              <option value="" disabled selected>Choose one…</option>
+              <option value="woman">Woman</option>
+              <option value="man">Man</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="prefer-not">Prefer not to say</option>
+            </select>
+          </label>
+          <label class="vibe-field">
+            <span class="vibe-label">Age</span>
+            <input
+              type="number"
+              name="age"
+              required
+              min="13"
+              max="120"
+              placeholder="e.g. 34"
+            />
+          </label>
+          <button type="submit" class="btn btn-primary vibe-submit">
+            See my personalized site
+          </button>
+        </form>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="logo" href="#">MW</a>
         <nav class="nav" aria-label="Primary">
           <a href="#work">Projects</a>
           <a href="#process">How it works</a>
-          <a href="#contact" class="nav-cta">Let's talk</a>
+          <a href="#contact" class="nav-cta">
+            Let’s talk<span class="nav-name-hook">, <span data-p-name></span></span>
+          </a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Residential redevelopment</p>
+            <p class="eyebrow">
+              Hi, <span data-p-name></span> · residential redevelopment
+            </p>
             <h1>
               Homes flipped with intention—
               <em>not</em> just for the market, for the neighborhood.
             </h1>
             <p class="lede">
-              Miya Wilson buys tired properties, reimagines them with quality
-              finishes, and brings well-designed homes back to your community.
+              Thanks for stopping by, <span data-p-name></span>. Miya Wilson buys
+              tired properties, reimagines them with quality finishes, and brings
+              well-designed homes back to your community.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Discuss a project</a>
@@ -68,8 +133,9 @@
           <article class="pillar">
             <h2>Transform</h2>
             <p>
-              Floor plans, finishes, and fixtures are chosen to feel timeless,
-              not trendy—so the next owner falls in love at first showing.
+              When you’re browsing with us, <span data-p-name></span>, picture
+              floor plans and finishes that feel timeless—so the next owner falls
+              in love at first showing.
             </p>
           </article>
           <article class="pillar">
@@ -86,7 +152,10 @@
         <div class="wrap feature-inner">
           <div class="feature-copy">
             <p class="eyebrow">Featured transformation</p>
-            <h2>Before &amp; after energy that sells</h2>
+            <h2>
+              <span data-p-name></span>, here’s before &amp; after energy that
+              sells
+            </h2>
             <p>
               This mock project highlights open living, a reconfigured kitchen,
               and light-filled bedrooms—typical of how we approach every flip.
@@ -118,7 +187,10 @@
             <li>
               <span class="step-num">01</span>
               <h3>Discovery</h3>
-              <p>We review the property, numbers, and timeline together.</p>
+              <p>
+                We review the property, numbers, and timeline together—your
+                questions, <span data-p-name></span>, always welcome.
+              </p>
             </li>
             <li>
               <span class="step-num">02</span>
@@ -137,7 +209,7 @@
       <section class="cta" id="contact">
         <div class="wrap cta-inner">
           <div>
-            <h2>Have a lead or a property in mind?</h2>
+            <h2><span data-p-name></span>, have a lead or a property in mind?</h2>
             <p class="cta-sub">
               Off-market opportunities, wholesaler introductions, and
               collaboration welcome—reach out and we’ll respond within one
@@ -159,11 +231,17 @@
         <p class="footer-brand">Miya Wilson · Home Transformations</p>
         <p class="footer-meta">© <span id="y"></span> · Mock preview site</p>
         <p class="footer-credit">Created by Ash Perry</p>
+        <p class="footer-reset-wrap">
+          <button type="button" class="footer-reset" data-reset-vibe>
+            Reset personalization
+          </button>
+        </p>
       </div>
     </footer>
 
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
+    <script src="personal.js" defer></script>
   </body>
 </html>
