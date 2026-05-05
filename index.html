@@ -8,6 +8,21 @@
       content="Miya Wilson transforms neglected houses into standout homes—thoughtful renovations and strategic resale in your community."
     />
     <title>Miya Wilson · Home Transformations</title>
+    <!-- Ensures styles.css & personal.js load when Pages URL has no trailing slash -->
+    <script>
+      (function () {
+        if (
+          location.hostname === "ashperry1.github.io" &&
+          location.pathname.startsWith("/MiyaWilson")
+        ) {
+          var b = document.createElement("base");
+          b.href = "/MiyaWilson/";
+          var t = document.querySelector("title");
+          if (t) document.head.insertBefore(b, t);
+          else document.head.appendChild(b);
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
