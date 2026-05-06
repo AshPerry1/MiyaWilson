@@ -2,39 +2,39 @@
   var STEPS = [
     {
       id: "tour-entry",
-      title: "The front porch",
+      title: "Glad you’re here",
       text:
-        "Start where every showing starts—threshold energy. This is how Move Wise stewards the story before a single hinge turns.",
+        "Tiny guided spin through the site—no quizzes, no jargon map. Hit Next whenever you’re ready for the next beat.",
     },
     {
       id: "tour-hall",
-      title: "The gallery hall",
+      title: "Our favorite soapbox",
       text:
-        "This is where light hits—our rule of thumb once you’re inside. If it doesn’t slow a buyer in the doorway, we keep sanding.",
+        "We’re allergic to ‘cheap wow.’ If a buyer doesn’t slow down in the doorway, we keep fussing until they do.",
     },
     {
       id: "tour-workshop",
-      title: "The workshop",
+      title: "What we actually do",
       text:
-        "Quiet acquisition, disciplined build, deliberate reveal—workflow like floor joists you don’t notice until they matter.",
+        "Buy quiet, renovate loud only where it earns out, stage with a light hand—then resell with receipts instead of adjectives.",
     },
     {
       id: "work",
-      title: "The living spine",
+      title: "Receipts, not flexing",
       text:
-        "Before and after aren’t garnish here—they’re the same footprint in a braver conversation. That’s the heart of the walk-through.",
+        "Before and after share the same footprint here—same bones, braver story. It’s the shortest path to ‘oh, I get it.’",
     },
     {
       id: "process",
-      title: "The rhythm of the house",
+      title: "Always three beats",
       text:
-        "Discovery, build, reveal—three beats we repeat until they feel like a second floor you trust under your feet.",
+        "Discovery, build, reveal—repeat until it’s almost boring in the best way. You always know which chapter we’re in.",
     },
     {
       id: "contact",
-      title: "The side door out",
+      title: "Now the fun part",
       text:
-        "Leave a note, a rumor, or a brief—whisper or shout. The tour ends; the door stays open for your next lead.",
+        "That was the highlights reel. Got a lead, a rumor, or a tired house? Whisper or shout—we read the real mail.",
     },
   ];
 
@@ -80,9 +80,9 @@
     }
     titleEl.textContent = step.title;
     textEl.textContent = step.text;
-    stepLabel.textContent = "Stop " + (i + 1) + " of " + STEPS.length;
+    stepLabel.textContent = "Spin " + (i + 1) + " · " + STEPS.length;
     prevBtn.disabled = i === 0;
-    nextBtn.textContent = i === STEPS.length - 1 ? "Finish tour" : "Next room";
+    nextBtn.textContent = i === STEPS.length - 1 ? "That’s the tour" : "Next";
   }
 
   function openTour() {
@@ -147,13 +147,13 @@
     endBtn = document.createElement("button");
     endBtn.type = "button";
     endBtn.className = "home-tour__btn home-tour__btn--ghost";
-    endBtn.textContent = "End tour";
+    endBtn.textContent = "Exit";
     endBtn.addEventListener("click", closeTour);
 
     prevBtn = document.createElement("button");
     prevBtn.type = "button";
     prevBtn.className = "home-tour__btn home-tour__btn--ghost";
-    prevBtn.textContent = "Previous";
+    prevBtn.textContent = "Back";
     prevBtn.addEventListener("click", prev);
 
     nextBtn = document.createElement("button");
@@ -182,9 +182,17 @@
   }
 
   document.addEventListener("click", function (e) {
-    if (e.target.closest("[data-home-tour]")) {
+    var trigger = e.target.closest("[data-home-tour]");
+    if (!trigger) return;
+    var onHome = !!document.getElementById("tour-entry");
+    if (onHome) {
       e.preventDefault();
       openTour();
+      return;
+    }
+    if (trigger.tagName !== "A" || !trigger.getAttribute("href")) {
+      e.preventDefault();
+      window.location.href = "index.html?homeTour=1";
     }
   });
 

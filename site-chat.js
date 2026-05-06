@@ -41,7 +41,7 @@
       id: "tour",
       label: "Walk me through the site",
       reply:
-        "On the homepage, tap “Take a home tour” in the hero for a guided walk—porch, hall, workshop, living spine, cadence, and the side door out. It’s scripted, not AI, but it answers the layout question fast.",
+        "On the homepage, tap “Quick spin” in the top nav for a short guided walk through the page. It’s scripted, not AI—just a fast orientation.",
     },
   ];
 
