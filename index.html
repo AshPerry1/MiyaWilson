@@ -8,7 +8,7 @@
       content="Move Well by Miya Wilson transforms neglected houses into standout homes—thoughtful renovations and strategic resale across your community."
     />
     <title>Move Well by Miya Wilson · Home Transformations</title>
-    <!-- Ensures styles.css & personal.js load when Pages URL has no trailing slash -->
+    <!-- Ensures styles.css (+ other assets) load when Pages URL has no trailing slash -->
     <script>
       (function () {
         if (
@@ -26,85 +26,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      try {
-        if (
-          sessionStorage.getItem("miyaVisitorProfile") ||
-          sessionStorage.getItem("miyaVisitorDismissed")
-        ) {
-          document.documentElement.classList.add("vibe-skip-gate");
-        }
-      } catch (e) {}
-    </script>
   </head>
   <body>
-    <div
-      id="vibe-gate"
-      class="vibe-gate"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="vibe-title"
-    >
-      <div class="vibe-gate-card">
-        <button
-          type="button"
-          class="vibe-gate-close"
-          id="vibe-gate-close"
-          aria-label="Skip personalization"
-        >
-          ×
-        </button>
-        <p class="vibe-gate-badge">Curate your view</p>
-        <h2 id="vibe-title">Before you wander in…</h2>
-        <p class="vibe-gate-lede">
-          Optionally tell us who you are—we’ll tune the type spacing,
-          and thread your first name through the language of the site for this visit
-          only. Step past entirely if you’d rather stay incognito.
-        </p>
-        <form id="vibe-form" class="vibe-form" novalidate>
-          <label class="vibe-field">
-            <span class="vibe-label">Your name</span>
-            <input
-              type="text"
-              name="name"
-              required
-              autocomplete="name"
-              placeholder="First name or full name"
-            />
-          </label>
-          <label class="vibe-field">
-            <span class="vibe-label">Gender</span>
-            <select name="gender" required>
-              <option value="" disabled selected>Choose one…</option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-            </select>
-          </label>
-          <label class="vibe-field">
-            <span class="vibe-label">Age</span>
-            <input
-              type="number"
-              name="age"
-              required
-              min="13"
-              max="120"
-              placeholder="e.g. 34"
-            />
-          </label>
-          <button type="submit" class="btn btn-primary vibe-submit">
-            Enter tailored experience
-          </button>
-          <button type="button" class="vibe-gate-skip" id="vibe-gate-skip-text">
-            Continue without personalizing
-          </button>
-        </form>
-      </div>
-    </div>
-
     <div class="site-top">
       <div class="site-utility" aria-label="Contact shortcuts">
         <div class="wrap site-utility__inner">
@@ -150,9 +77,7 @@
             <a href="about.html">About</a>
             <a href="#work">Projects</a>
             <a href="#process">How it works</a>
-            <a href="#contact" class="nav-cta nav-cta--broker">
-              Contact<span class="nav-name-hook"> · <span data-p-name></span></span>
-            </a>
+            <a href="#contact" class="nav-cta nav-cta--broker">Contact</a>
           </nav>
         </div>
       </header>
@@ -163,21 +88,12 @@
         <div class="hero-split__shell">
           <div class="hero-split__panel hero-split__copy lux-reveal">
             <div class="hero-split__copy-inner">
-              <p class="hero-split__ribbon copy-if-personal">
-                <span class="hero-split__ribbon-inner"
-                  ><span data-p-name></span> · private flips · public pride</span
-                >
-              </p>
-              <p class="hero-split__ribbon copy-if-generic">
-                <span class="hero-split__ribbon-inner">Private flips · public pride</span>
+              <p class="hero-split__ribbon">
+                <span class="hero-split__ribbon-inner">You · private flips · public pride</span>
               </p>
               <h1 id="hero-heading">Houses calibrated for the exhale.</h1>
-              <p class="hero-split__dek copy-if-personal">
-                Glad you stopped in, <span data-p-name></span>—Move Well by Miya Wilson stewards weary properties through
-                honest renovation, restrained staging, and resale with receipts.
-              </p>
-              <p class="hero-split__dek copy-if-generic">
-                Move Well by Miya Wilson stewards weary properties through honest renovation, restrained staging, and
+              <p class="hero-split__dek">
+                Glad you’re here—Move Well by Miya Wilson stewards weary properties through honest renovation, restrained staging, and
                 resale with receipts.
               </p>
               <p class="hero-split__stat-line">12+ residences thoughtfully repositioned · discretion first</p>
@@ -266,11 +182,8 @@
               <span class="method__roman">II</span>
               <div>
                 <h3>Controlled transformation</h3>
-                <p class="copy-if-personal">
-                  You’re touring with intention, <span data-p-name></span>—imagine restrained demolition, obsessive trim, artisans who sweat the grout lines.
-                </p>
-                <p class="copy-if-generic">
-                  Imagine restrained demolition, obsessive trim, artisans who sweat the grout lines—we keep the storyline coherent room to room.
+                <p>
+                  You’re touring with intention—imagine restrained demolition, obsessive trim, artisans who sweat the grout lines—we keep the storyline coherent room to room.
                 </p>
               </div>
             </li>
@@ -292,13 +205,7 @@
           <div class="feature-copy feature-copy--lux lux-reveal">
             <p class="feature-kicker">Evidence, not adjectives</p>
             <p class="eyebrow eyebrow--on-dark">Case study</p>
-            <h2>
-              <span class="copy-if-personal"><span data-p-name></span>, walk the
-                hinge line between “before” hesitation and “after” relief</span
-              ><span class="copy-if-generic"
-                >Walk the hinge line between “before” hesitation and “after” relief</span
-              >
-            </h2>
+            <h2>You walk the hinge line between “before” hesitation and “after” relief</h2>
             <p class="feature-dek">
               Same footprint, different temperature in the room—we opened the plan, let
               quartz speak softly, and chased every shadow out of the hallway. It’s a mock
@@ -369,11 +276,8 @@
             <span class="timeline__dot"></span>
             <span class="timeline__marker">First</span>
             <h3>Discovery with receipts</h3>
-            <p class="copy-if-personal">
-              We sit with the numbers and the weird corners of the house together—ask the impolite questions, <span data-p-name></span>. No sugar on dry rot.
-            </p>
-            <p class="copy-if-generic">
-              We sit with the numbers and the weird corners together—asking the impolite questions early. No sugar on dry rot.
+            <p>
+              We sit with you, the numbers, and the weird corners of the house together—asking the impolite questions early. No sugar on dry rot.
             </p>
           </article>
           <article class="timeline__item timeline__item--left">
@@ -401,11 +305,7 @@
           <div class="cta-inner cta-inner--lux">
             <div>
             <p class="cta--lux__overline">Whisper or shout—either works</p>
-            <h2>
-              <span class="copy-if-personal"
-                ><span data-p-name></span>, bring the lead, or bring the rumor of one</span
-              ><span class="copy-if-generic">Bring the lead, or bring the rumor of one</span>
-            </h2>
+            <h2>You bring the lead, or bring the rumor of one</h2>
             <p class="cta-sub">
               Whisper if it’s fragile. Shout if you’re ready. We thrive on introductions from humans who overheard conversations at Pilates
               just as much as polished packets from brokers.
@@ -426,7 +326,6 @@
       <div class="wrap footer-inner">
         <p class="footer-brand">Move Well by Miya Wilson · Boutique residential redevelopment</p>
         <p class="footer-meta">© <span id="y"></span> · Mock preview site</p>
-        <p class="footer-credit">Created by Ash Perry</p>
         <p class="footer-photos">
           Photos for this mock preview from
           <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer"
@@ -434,18 +333,12 @@
           >
           photographers.
         </p>
-        <p class="footer-reset-wrap">
-          <button type="button" class="footer-reset" data-reset-vibe>
-            Reset personalization
-          </button>
-        </p>
       </div>
     </footer>
 
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
-    <script src="personal.js" defer></script>
     <script src="lux-motion.js" defer></script>
   </body>
 </html>
