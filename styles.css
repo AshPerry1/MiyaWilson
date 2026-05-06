@@ -1699,25 +1699,6 @@ a {
   text-align: center;
 }
 
-.footer-photos {
-  grid-column: 1 / -1;
-  margin: 0.5rem 0 0;
-  font-size: 0.75rem;
-  color: var(--ink-muted);
-  text-align: center;
-  line-height: 1.5;
-}
-
-.footer-photos a {
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.footer-photos a:hover {
-  color: var(--mustard-ink);
-}
-
 @media (max-width: 520px) {
   .footer-inner {
     grid-template-columns: 1fr;
