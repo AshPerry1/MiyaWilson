@@ -606,6 +606,9 @@ a {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  animation: logo-brand-flip-hero 8.2s cubic-bezier(0.55, 0.09, 0.36, 1) 1 both;
   filter: drop-shadow(0 26px 52px rgba(0, 0, 0, 0.38)) drop-shadow(0 10px 28px rgba(0, 0, 0, 0.22))
     drop-shadow(0 2px 4px rgba(var(--garnet-rgb), 0.12));
   transition: filter 0.25s ease;
@@ -614,6 +617,12 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .hero-split__overlap-brand {
     animation: none;
+  }
+
+  .hero-split__overlap-brand .logo__brand-img {
+    animation: none;
+    will-change: auto;
+    transform: none;
   }
 }
 
@@ -629,11 +638,28 @@ a {
 
 @keyframes hero-overlap-brand-drift {
   0% {
-    transform: translateX(-46%) translateY(-50%) translate3d(-2px, -4px, 0);
+    transform: translateX(-46%) translateY(-50%) translate3d(-8px, -10px, 0);
   }
 
   100% {
-    transform: translateX(-46%) translateY(-50%) translate3d(2px, 4px, 0);
+    transform: translateX(-46%) translateY(-50%) translate3d(8px, 10px, 0);
+  }
+}
+
+/* Hero PNG only · flip separates from drift (anchor vs img transform) · header markup unchanged */
+@keyframes logo-brand-flip-hero {
+  0%,
+  24.39% {
+    transform: rotate(0deg);
+  }
+  31.71% {
+    transform: rotate(180deg);
+  }
+  92.68% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -758,11 +784,11 @@ a {
 
   @keyframes hero-overlap-brand-drift {
     0% {
-      transform: translateX(-50%) translate3d(-2px, -4px, 0);
+      transform: translateX(-50%) translate3d(-7px, -9px, 0);
     }
 
     100% {
-      transform: translateX(-50%) translate3d(2px, 4px, 0);
+      transform: translateX(-50%) translate3d(7px, 9px, 0);
     }
   }
 
