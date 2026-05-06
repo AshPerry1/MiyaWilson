@@ -200,10 +200,6 @@ a {
   padding: 1.15rem 0;
 }
 
-.header-inner--nav-only {
-  justify-content: flex-end;
-}
-
 /* Logo: monogram + stacked sans (reference layout) */
 .logo {
   display: flex;
@@ -248,37 +244,6 @@ a {
   width: auto;
   max-width: min(104px, 26vw);
   object-fit: contain;
-  transform-origin: 50% 50%;
-  will-change: transform;
-  animation: logo-brand-flip 8.2s cubic-bezier(0.55, 0.09, 0.36, 1) 1 both;
-}
-
-@keyframes logo-brand-flip {
-  /* 0–2s: upright */
-  0%,
-  24.39% {
-    transform: rotate(0deg);
-  }
-  /* flip to inverted */
-  31.71% {
-    transform: rotate(180deg);
-  }
-  /* hold ~5s */
-  92.68% {
-    transform: rotate(180deg);
-  }
-  /* return */
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .logo__brand-img {
-    animation: none;
-    will-change: auto;
-    transform: none;
-  }
 }
 
 .logo__stack {
