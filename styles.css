@@ -18,11 +18,12 @@
   --mustard-ink: #927825;
   --copper: #c27e35;
   --copper-rgb: 194, 126, 53;
-  --dust: #6f7d7b;
+  --dust: #6e5e58;
   --garnet: #76290b;
   --garnet-rgb: 118, 41, 11;
-  --velvet-forest: #1e3226;
-  --velvet-rgb: 30, 50, 38;
+  /* Deep garnet for type + photo rails (replacing editorial forest green) */
+  --velvet-forest: #351910;
+  --velvet-rgb: 53, 25, 16;
 
   --canvas: var(--cream);
   --canvas-deep: var(--cream-soft);
@@ -30,13 +31,13 @@
   --paper-dark: var(--cream-soft);
   --paper-rgb: 250, 247, 239;
   --white: #fdfbf6;
-  /* Type on dark green panels */
+  /* Type on dark garnet panels */
   --cream-rgb: 248, 244, 235;
 
   --champagne: #f7f3ea;
   --champagne-deep: #ebe3d6;
   --charcoal: var(--velvet-forest);
-  --charcoal-muted: #5a6864;
+  --charcoal-muted: #695550;
   --gold: var(--mustard);
   --gold-muted: rgba(var(--mustard-rgb), 0.28);
 
@@ -1218,9 +1219,9 @@ a {
   padding: clamp(4.5rem, 11vw, 7rem) 0;
   background: radial-gradient(
     ellipse 120% 80% at 20% 20%,
-    #2a3d32 0%,
+    #4a2419 0%,
     var(--velvet-forest) 55%,
-    #17231c 100%
+    #160807 100%
   );
   color: var(--champagne);
   border-top: 1px solid rgba(var(--mustard-rgb), 0.42);
@@ -1534,7 +1535,7 @@ a {
   padding: clamp(4.75rem, 11vw, 7rem) 0;
   background: linear-gradient(
     180deg,
-    #17231c,
+    #140807,
     var(--velvet-forest)
   );
   color: var(--champagne);
