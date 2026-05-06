@@ -40,7 +40,7 @@
     obs.observe(el);
   });
 
-  /* Guarantee above-the-fold blocks are never stuck hidden (IO quirks, slow paint, gate overlay). */
+  /* Guarantee above-the-fold blocks are never stuck hidden (IO quirks, slow paint). */
   function kickVisible() {
     document.querySelectorAll(".lux-reveal").forEach(function (el) {
       if (el.classList.contains("lux-reveal--in")) return;
