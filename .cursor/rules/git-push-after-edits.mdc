@@ -1,0 +1,14 @@
+---
+description: Commit and push to GitHub after making edits to this repo
+alwaysApply: true
+---
+
+# Push to GitHub after edits
+
+Whenever you change tracked files in this repository (HTML, CSS, JS, workflows, etc.), finish the task by:
+
+1. `git add` the files you touched (or `git add -A` when the whole change set should ship).
+2. `git commit` with a short, clear message describing what changed and why.
+3. `git push origin main` (or the current branch if not `main`).
+
+Do not leave fixes sitting only in the working tree unless the user explicitly asked not to push. If there is nothing to commit, say so and skip push.
