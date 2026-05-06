@@ -1725,3 +1725,164 @@ a {
     text-align: center;
   }
 }
+
+/* —— Guided “home tour” —— */
+#tour-entry,
+#tour-hall,
+#tour-workshop,
+#work,
+#process,
+#contact {
+  scroll-margin-top: 6rem;
+}
+
+.statement-strip#tour-hall {
+  overflow: visible;
+}
+
+.btn--hero-tour {
+  border-color: rgba(var(--mustard-rgb), 0.65);
+  color: var(--garnet);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.71rem;
+  font-weight: 600;
+}
+
+.btn--hero-tour:hover {
+  border-color: var(--mustard);
+  background: rgba(var(--mustard-rgb), 0.08);
+}
+
+.home-tour-focus {
+  position: relative;
+  z-index: 2;
+  outline: 3px solid var(--mustard);
+  outline-offset: 6px;
+  border-radius: 2px;
+  transition:
+    outline 0.3s ease,
+    outline-offset 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-tour-focus {
+    transition: none;
+  }
+}
+
+.home-tour {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2rem);
+  pointer-events: none;
+}
+
+.home-tour[hidden] {
+  display: none;
+}
+
+.home-tour__card {
+  pointer-events: auto;
+  width: min(26rem, 100%);
+  padding: clamp(1.35rem, 3.5vw, 1.75rem);
+  background: rgba(253, 251, 246, 0.97);
+  border: 1px solid rgba(var(--garnet-rgb), 0.15);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--garnet);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.2),
+    0 2px 0 rgba(var(--mustard-rgb), 0.35);
+}
+
+.home-tour__step {
+  margin: 0 0 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.home-tour__title {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw + 1rem, 1.85rem);
+  font-weight: 600;
+  line-height: 1.18;
+  color: var(--ink);
+}
+
+.home-tour__text {
+  margin: 0 0 1.25rem;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  color: rgba(var(--velvet-rgb), 0.92);
+}
+
+.home-tour__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-tour__btn {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.home-tour__btn--ghost {
+  background: transparent;
+  border-color: rgba(var(--ink-rgb), 0.22);
+  color: var(--ink);
+}
+
+.home-tour__btn--ghost:hover:not(:disabled) {
+  border-color: var(--garnet);
+  color: var(--garnet);
+}
+
+.home-tour__btn--ghost:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.home-tour__btn--primary {
+  margin-left: auto;
+  background: var(--mustard);
+  border-color: var(--mustard);
+  color: #fff;
+}
+
+.home-tour__btn--primary:hover {
+  filter: brightness(1.06);
+}
+
+@media (max-width: 540px) {
+  .home-tour__btn--primary {
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-tour__actions {
+    justify-content: stretch;
+  }
+
+  .home-tour__actions .home-tour__btn:not(.home-tour__btn--primary) {
+    flex: 1;
+    text-align: center;
+  }
+}
