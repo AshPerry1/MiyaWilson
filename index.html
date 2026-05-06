@@ -105,77 +105,110 @@
       </div>
     </div>
 
-    <header class="site-header">
-      <div class="wrap header-inner">
-        <a class="logo" href="index.html"><span class="logo-line1">Move</span><span class="logo-line2">Well</span></a>
-        <nav class="nav" aria-label="Primary">
-          <a href="about.html">About me</a>
-          <a href="#work">Projects</a>
-          <a href="#process">How it works</a>
-          <a href="#contact" class="nav-cta">
-            Let’s talk<span class="nav-name-hook">, <span data-p-name></span></span>
+    <div class="site-top">
+      <div class="site-utility" aria-label="Contact shortcuts">
+        <div class="wrap site-utility__inner">
+          <a class="site-utility__link" href="tel:+15551234000">
+            <svg class="site-utility__icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+            <span>(555) 123-4000</span>
           </a>
-        </nav>
+          <a class="site-utility__link" href="mailto:hello@movewellhome.com">
+            <svg class="site-utility__icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <span>hello@movewellhome.com</span>
+          </a>
+        </div>
       </div>
-    </header>
+      <header class="site-header site-header--broker">
+        <div class="wrap header-inner header-inner--broker">
+          <a class="logo logo--broker" href="index.html">
+            <span class="logo__mark">MW</span>
+            <span class="logo__stack">
+              <span class="logo__name">Move Well</span>
+              <span class="logo__line2">Residential redevelopment</span>
+            </span>
+          </a>
+          <nav class="nav nav--broker" aria-label="Primary">
+            <a href="about.html">About</a>
+            <a href="#work">Projects</a>
+            <a href="#process">How it works</a>
+            <a href="#contact" class="nav-cta nav-cta--broker">
+              Contact<span class="nav-name-hook"> · <span data-p-name></span></span>
+            </a>
+          </nav>
+        </div>
+      </header>
+    </div>
 
     <main id="main-content">
-      <section class="hero hero--lux" aria-labelledby="hero-heading">
-        <div class="hero--lux__grain" aria-hidden="true"></div>
-        <div class="hero--lux__deco" aria-hidden="true">
-          <span class="lux-shape lux-shape--slant"></span>
-          <span class="lux-shape lux-shape--ring"></span>
-          <span class="lux-shape lux-shape--bar"></span>
-        </div>
-        <div class="wrap hero--lux__grid">
-          <div class="hero-copy hero--lux__copy lux-reveal">
-            <p class="hero-marque"><span></span>Private flips · public pride</p>
-            <p class="eyebrow eyebrow--lux copy-if-personal">
-              Glad you’re here, <span data-p-name></span> · residential stewardship
-            </p>
-            <p class="eyebrow eyebrow--lux copy-if-generic">Residential stewardship</p>
-            <p class="eyebrow-hairline" aria-hidden="true"></p>
-            <h1 id="hero-heading">
-              Houses that exhale<span class="hero-h1-accent">when the front door opens.</span>
-            </h1>
-            <p class="lede-strong copy-if-personal">
-              Movement is our language, <span data-p-name></span>—architecture, pacing, and nerves of steel.
-            </p>
-            <p class="lede-strong copy-if-generic">
-              Movement is our language—architecture, pacing, and nerves of steel.
-            </p>
-            <p class="lede lede-sub copy-if-personal">
-              Move Well acquires weary properties on purpose—then invests in detail you can feel beneath your feet:
-              honest materials, light that behaves, staging that respects the buyer’s imagination.
-            </p>
-            <p class="lede lede-sub copy-if-generic">
-              Move Well acquires weary properties on purpose—then invests in detail you can feel beneath your feet:
-              honest materials, light that behaves, staging that respects the buyer’s imagination.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Start a discreet conversation</a>
-              <a class="btn btn-ghost btn-ghost--lux" href="#work">View a transformation</a>
+      <section class="hero hero-split" aria-labelledby="hero-heading">
+        <div class="hero-split__shell">
+          <div class="hero-split__panel hero-split__copy lux-reveal">
+            <div class="hero-split__copy-inner">
+              <p class="hero-split__ribbon copy-if-personal">
+                <span class="hero-split__ribbon-inner"
+                  ><span data-p-name></span> · private flips · public pride</span
+                >
+              </p>
+              <p class="hero-split__ribbon copy-if-generic">
+                <span class="hero-split__ribbon-inner">Private flips · public pride</span>
+              </p>
+              <h1 id="hero-heading">Houses calibrated for the exhale.</h1>
+              <p class="hero-split__dek copy-if-personal">
+                Glad you stopped in, <span data-p-name></span>—Move Well stewards weary properties through
+                honest renovation, restrained staging, and resale with receipts.
+              </p>
+              <p class="hero-split__dek copy-if-generic">
+                Move Well stewards weary properties through honest renovation, restrained staging, and
+                resale with receipts.
+              </p>
+              <p class="hero-split__stat-line">12+ residences thoughtfully repositioned · discretion first</p>
+              <div class="hero-split__actions">
+                <a class="btn btn-primary btn--hero-contact" href="#contact">Discuss a discreet brief</a>
+                <a class="btn btn-ghost btn--hero-secondary" href="#work">See a transformation</a>
+              </div>
             </div>
           </div>
-          <div class="hero-visual hero--lux__visual lux-reveal">
-            <figure class="hero-photo-wrap hero-photo-wrap--lux">
+          <div class="hero-split__panel hero-split__media lux-reveal" aria-hidden="false">
+            <figure class="hero-split__figure hero-split__figure--full">
               <img
-                class="hero-photo"
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=960&amp;q=82"
-                srcset="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=640&amp;q=82 640w, https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=960&amp;q=82 960w, https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=1200&amp;q=82 1200w"
-                sizes="(max-width: 900px) 100vw, 44vw"
-                width="960"
-                height="720"
-                alt="Open living and dining with warm light and cream walls after renovation"
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&amp;fit=crop&amp;w=1600&amp;h=1100&amp;q=85"
+                srcset="
+                  https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&amp;fit=crop&amp;w=900&amp;q=85   900w,
+                  https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&amp;fit=crop&amp;w=1400&amp;q=85 1400w
+                "
+                sizes="(max-width: 900px) 100vw, 50vw"
+                width="1400"
+                height="933"
+                alt="Luxury villa at dusk with palms and warm uplighting"
                 decoding="async"
                 fetchpriority="high"
               />
             </figure>
-            <aside class="hero-card hero-card--lux" aria-label="Experience at a glance">
-              <span class="hero-card__accent">*</span>
-              <span class="hero-stat">12+</span>
-              <span class="hero-stat-label">residences thoughtfully turned</span>
-            </aside>
+            <figure class="hero-split__figure hero-split__figure--overlap">
+              <img
+                src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=720&amp;h=520&amp;q=85"
+                srcset="
+                  https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=480&amp;q=85 480w,
+                  https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=720&amp;q=85 720w
+                "
+                sizes="(max-width: 900px) 92vw, 28vw"
+                width="720"
+                height="520"
+                alt="Sunlit interior staircase and entryway in a renovated home"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
       </section>

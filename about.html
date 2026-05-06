@@ -31,21 +31,49 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap header-inner">
-        <a class="logo" href="index.html"
-          ><span class="logo-line1">Move</span><span class="logo-line2">Well</span></a
-        >
-        <nav class="nav" aria-label="Primary">
-          <a href="about.html" class="nav-current" aria-current="page">About me</a>
-          <a href="index.html#work">Projects</a>
-          <a href="index.html#process">How it works</a>
-          <a href="index.html#contact" class="nav-cta">
-            Let’s talk<span class="nav-name-hook">, <span data-p-name></span></span>
+    <div class="site-top">
+      <div class="site-utility" aria-label="Contact shortcuts">
+        <div class="wrap site-utility__inner">
+          <a class="site-utility__link" href="tel:+15551234000">
+            <svg class="site-utility__icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+            <span>(555) 123-4000</span>
           </a>
-        </nav>
+          <a class="site-utility__link" href="mailto:hello@movewellhome.com">
+            <svg class="site-utility__icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <span>hello@movewellhome.com</span>
+          </a>
+        </div>
       </div>
-    </header>
+      <header class="site-header site-header--broker">
+        <div class="wrap header-inner header-inner--broker">
+          <a class="logo logo--broker" href="index.html">
+            <span class="logo__mark">MW</span>
+            <span class="logo__stack">
+              <span class="logo__name">Move Well</span>
+              <span class="logo__line2">Residential redevelopment</span>
+            </span>
+          </a>
+          <nav class="nav nav--broker" aria-label="Primary">
+            <a href="about.html" class="nav-current" aria-current="page">About</a>
+            <a href="index.html#work">Projects</a>
+            <a href="index.html#process">How it works</a>
+            <a href="index.html#contact" class="nav-cta nav-cta--broker">
+              Contact<span class="nav-name-hook"> · <span data-p-name></span></span>
+            </a>
+          </nav>
+        </div>
+      </header>
+    </div>
 
     <main id="main-content" class="page-about-main">
       <section class="about-pink about-pink--page" aria-labelledby="about-heading">
