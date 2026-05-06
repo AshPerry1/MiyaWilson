@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -58,11 +58,12 @@
         >
           ×
         </button>
-        <p class="vibe-gate-badge">Preview feature</p>
-        <h2 id="vibe-title">Make this site feel like you</h2>
+        <p class="vibe-gate-badge">Curate your view</p>
+        <h2 id="vibe-title">Before you wander in…</h2>
         <p class="vibe-gate-lede">
-          Optional—we’ll match colors &amp; type and use your first name on the
-          page (saved only for this browser session). Or skip below.
+          Optionally tell us who you are—we’ll tune the type spacing,
+          and thread your first name through the language of the site for this visit
+          only. Step past entirely if you’d rather stay incognito.
         </p>
         <form id="vibe-form" class="vibe-form" novalidate>
           <label class="vibe-field">
@@ -95,10 +96,10 @@
             />
           </label>
           <button type="submit" class="btn btn-primary vibe-submit">
-            See my personalized site
+            Enter tailored experience
           </button>
           <button type="button" class="vibe-gate-skip" id="vibe-gate-skip-text">
-            No thanks — show the standard site
+            Continue without personalizing
           </button>
         </form>
       </div>
@@ -119,39 +120,50 @@
     </header>
 
     <main id="main-content">
-      <section class="hero">
-        <div class="wrap hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow copy-if-personal">
-              Hi, <span data-p-name></span> · residential redevelopment
+      <section class="hero hero--lux" aria-labelledby="hero-heading">
+        <div class="hero--lux__grain" aria-hidden="true"></div>
+        <div class="hero--lux__deco" aria-hidden="true">
+          <span class="lux-shape lux-shape--slant"></span>
+          <span class="lux-shape lux-shape--ring"></span>
+          <span class="lux-shape lux-shape--bar"></span>
+        </div>
+        <div class="wrap hero--lux__grid">
+          <div class="hero-copy hero--lux__copy lux-reveal">
+            <p class="hero-marque"><span></span>Private flips · public pride</p>
+            <p class="eyebrow eyebrow--lux copy-if-personal">
+              Glad you’re here, <span data-p-name></span> · residential stewardship
             </p>
-            <p class="eyebrow copy-if-generic">Residential redevelopment</p>
-            <h1>
-              Homes flipped with intention—
-              <em>not</em> just for the market, for the neighborhood.
+            <p class="eyebrow eyebrow--lux copy-if-generic">Residential stewardship</p>
+            <p class="eyebrow-hairline" aria-hidden="true"></p>
+            <h1 id="hero-heading">
+              Houses that exhale<span class="hero-h1-accent">when the front door opens.</span>
             </h1>
-            <p class="lede copy-if-personal">
-              Thanks for stopping by, <span data-p-name></span>. Move Well buys
-              tired properties, reimagines them with quality finishes, and brings
-              well-designed homes back to your community.
+            <p class="lede-strong copy-if-personal">
+              Movement is our language, <span data-p-name></span>—architecture, pacing, and nerves of steel.
             </p>
-            <p class="lede copy-if-generic">
-              Thanks for stopping by. Move Well buys tired properties, reimagines
-              them with quality finishes, and brings well-designed homes back to
-              your community.
+            <p class="lede-strong copy-if-generic">
+              Movement is our language—architecture, pacing, and nerves of steel.
+            </p>
+            <p class="lede lede-sub copy-if-personal">
+              Move Well acquires weary properties on purpose—then invests in detail you can feel beneath your feet:
+              honest materials, light that behaves, staging that respects the buyer’s imagination.
+            </p>
+            <p class="lede lede-sub copy-if-generic">
+              Move Well acquires weary properties on purpose—then invests in detail you can feel beneath your feet:
+              honest materials, light that behaves, staging that respects the buyer’s imagination.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Discuss a project</a>
-              <a class="btn btn-ghost" href="#work">See recent work</a>
+              <a class="btn btn-primary" href="#contact">Start a discreet conversation</a>
+              <a class="btn btn-ghost btn-ghost--lux" href="#work">View a transformation</a>
             </div>
           </div>
-          <div class="hero-visual">
-            <figure class="hero-photo-wrap">
+          <div class="hero-visual hero--lux__visual lux-reveal">
+            <figure class="hero-photo-wrap hero-photo-wrap--lux">
               <img
                 class="hero-photo"
                 src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=960&amp;q=82"
                 srcset="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=640&amp;q=82 640w, https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=960&amp;q=82 960w, https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=1200&amp;q=82 1200w"
-                sizes="(max-width: 900px) 100vw, 42vw"
+                sizes="(max-width: 900px) 100vw, 44vw"
                 width="960"
                 height="720"
                 alt="Open living and dining with warm light and cream walls after renovation"
@@ -159,96 +171,105 @@
                 fetchpriority="high"
               />
             </figure>
-            <div class="hero-card">
+            <aside class="hero-card hero-card--lux" aria-label="Experience at a glance">
+              <span class="hero-card__accent">*</span>
               <span class="hero-stat">12+</span>
-              <span class="hero-stat-label">completed flips</span>
-            </div>
+              <span class="hero-stat-label">residences thoughtfully turned</span>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section class="pillars">
-        <div class="wrap pillars-grid">
-          <article class="pillar">
-            <div class="pillar-media">
-              <img
-                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&amp;fit=crop&amp;w=640&amp;q=80"
-                width="640"
-                height="400"
-                alt="Charming residential home exterior with front yard"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <h2>Source</h2>
-            <p>
-              We identify properties with strong bones and clear upside—then
-              move quickly when the fit is right.
-            </p>
-          </article>
-          <article class="pillar">
-            <div class="pillar-media">
-              <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=640&amp;q=80"
-                width="640"
-                height="400"
-                alt="Construction and remodeling on site with tools and materials"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <h2>Transform</h2>
-            <p class="copy-if-personal">
-              When you’re browsing with us, <span data-p-name></span>, picture
-              floor plans and finishes that feel timeless—so the next owner falls
-              in love at first showing.
-            </p>
-            <p class="copy-if-generic">
-              When you browse with us, picture floor plans and finishes that feel
-              timeless—so the next owner falls in love at first showing.
-            </p>
-          </article>
-          <article class="pillar">
-            <div class="pillar-media">
-              <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=640&amp;q=80"
-                width="640"
-                height="400"
-                alt="Modern home exterior with clean lines and landscaping"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <h2>Deliver</h2>
-            <p>
-              From permits to punch lists, we manage the renovation so the home
-              is ready to shine on day one.
-            </p>
-          </article>
+      <section class="statement-strip lux-reveal" aria-label="Studio philosophy">
+        <div class="statement-strip__shape" aria-hidden="true"></div>
+        <div class="wrap">
+          <blockquote class="statement-strip__quote">
+            We refuse the “cheap wow.” Everything we touch is calibrated for the exhale—that beat when a buyer slows down in the doorway.
+          </blockquote>
         </div>
       </section>
 
-      <section class="feature" id="work">
-        <div class="wrap feature-inner">
-          <div class="feature-copy">
-            <p class="eyebrow">Featured transformation</p>
+      <section class="method" aria-labelledby="method-heading">
+        <div class="wrap method__intro lux-reveal">
+          <span class="method__index">§</span>
+          <h2 id="method-heading">How we operate—as a discipline, not a checklist</h2>
+          <p class="method__dek">
+            No three identical tiles of corporate speak here. Below is how energy actually moves through a Move Well project.
+          </p>
+        </div>
+        <div class="method__split wrap">
+          <figure class="method__figure lux-reveal">
+            <div class="method__figure-frame"></div>
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=700&amp;h=920&amp;q=82"
+              width="700"
+              height="920"
+              alt="Renovation in progress beneath warm task lighting"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Field notes · in progress</figcaption>
+          </figure>
+          <ol class="method__list lux-reveal">
+            <li class="method__item">
+              <span class="method__roman">I</span>
+              <div>
+                <h3>Quiet acquisition</h3>
+                <p>
+                  Patient sourcing for houses with honorable bones—we pass on frantic unless the numbers blush in the right way.
+                </p>
+              </div>
+            </li>
+            <li class="method__item">
+              <span class="method__roman">II</span>
+              <div>
+                <h3>Controlled transformation</h3>
+                <p class="copy-if-personal">
+                  You’re touring with intention, <span data-p-name></span>—imagine restrained demolition, obsessive trim, artisans who sweat the grout lines.
+                </p>
+                <p class="copy-if-generic">
+                  Imagine restrained demolition, obsessive trim, artisans who sweat the grout lines—we keep the storyline coherent room to room.
+                </p>
+              </div>
+            </li>
+            <li class="method__item">
+              <span class="method__roman">III</span>
+              <div>
+                <h3>Unhurried unveiling</h3>
+                <p>
+                  Permit dust settles, inspectors nod, staging whispers—we don’t list until every hinge feels expensive.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="feature feature--lux" id="work">
+        <div class="wrap feature-inner feature-inner--lux">
+          <div class="feature-copy feature-copy--lux lux-reveal">
+            <p class="feature-kicker">Evidence, not adjectives</p>
+            <p class="eyebrow eyebrow--on-dark">Case study</p>
             <h2>
-              <span class="copy-if-personal"><span data-p-name></span>, here’s
-                before &amp; after energy that sells</span
-              ><span class="copy-if-generic">Here’s before &amp; after energy that sells</span>
+              <span class="copy-if-personal"><span data-p-name></span>, walk the
+                hinge line between “before” hesitation and “after” relief</span
+              ><span class="copy-if-generic"
+                >Walk the hinge line between “before” hesitation and “after” relief</span
+              >
             </h2>
-            <p>
-              This mock project highlights open living, a reconfigured kitchen,
-              and light-filled bedrooms—typical of how we approach every flip.
+            <p class="feature-dek">
+              Same footprint, different temperature in the room—we opened the plan, let
+              quartz speak softly, and chased every shadow out of the hallway. It’s a mock
+              rehearsal of how we obsess over the last 5% that reads as luxury.
             </p>
-            <ul class="feature-list">
-              <li>Full interior refresh &amp; systems check</li>
-              <li>Kitchen and baths designed for daily life</li>
-              <li>Curb appeal and landscaping that photograph well</li>
+            <ul class="feature-list feature-list--lux">
+              <li>Mechanicals vetted like a pre-flight checklist—not a patch job.</li>
+              <li>Kitchens and baths paced for real cooking, real Tuesday nights.</li>
+              <li>Curb appeal calibrated for dusk photos and drive-by jealousy.</li>
             </ul>
           </div>
-          <div class="feature-visual">
-            <div class="before-after">
+          <div class="feature-visual feature-visual--lux lux-reveal">
+            <div class="before-after before-after--lux">
               <div class="ba-column">
                 <div class="ba-label">Before</div>
                 <figure class="ba-figure ba-figure-before">
@@ -280,9 +301,9 @@
         </div>
       </section>
 
-      <section class="process" id="process">
-        <div class="wrap">
-          <figure class="process-banner">
+      <section class="process process--lux" id="process">
+        <div class="wrap lux-reveal">
+          <figure class="process-banner process-banner--lux">
             <img
               src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1120&amp;h=380&amp;q=80"
               width="1120"
@@ -292,56 +313,68 @@
               decoding="async"
             />
           </figure>
-          <p class="eyebrow center">How it works</p>
-          <h2 class="center heading-narrow">
-            A straight path from offer to “sold”
-          </h2>
-          <ol class="steps">
-            <li>
-              <span class="step-num">01</span>
-              <h3>Discovery</h3>
-              <p class="copy-if-personal">
-                We review the property, numbers, and timeline together—your
-                questions, <span data-p-name></span>, always welcome.
-              </p>
-              <p class="copy-if-generic">
-                We review the property, numbers, and timeline together—your questions
-                are always welcome.
-              </p>
-            </li>
-            <li>
-              <span class="step-num">02</span>
-              <h3>Design &amp; build</h3>
-              <p>Plans and materials are locked in; construction runs on schedule.</p>
-            </li>
-            <li>
-              <span class="step-num">03</span>
-              <h3>Launch</h3>
-              <p>Staging, photography, and listing strategy built to attract the right buyer.</p>
-            </li>
-          </ol>
+        </div>
+        <div class="wrap process-lux-head lux-reveal">
+          <p class="eyebrow eyebrow--soft">Cadence</p>
+          <h2 id="timeline-heading">What unfolds between offer and applause</h2>
+          <p class="process-lux-head__dek">
+            No mystery phases—three beats we repeat until they feel orchestral. Transparency is part of the finish.
+          </p>
+        </div>
+        <div class="wrap timeline lux-reveal" aria-labelledby="timeline-heading">
+          <div class="timeline__line" aria-hidden="true"></div>
+          <article class="timeline__item timeline__item--right">
+            <span class="timeline__dot"></span>
+            <span class="timeline__marker">First</span>
+            <h3>Discovery with receipts</h3>
+            <p class="copy-if-personal">
+              We sit with the numbers and the weird corners of the house together—ask the impolite questions, <span data-p-name></span>. No sugar on dry rot.
+            </p>
+            <p class="copy-if-generic">
+              We sit with the numbers and the weird corners together—asking the impolite questions early. No sugar on dry rot.
+            </p>
+          </article>
+          <article class="timeline__item timeline__item--left">
+            <span class="timeline__dot"></span>
+            <span class="timeline__marker">Second</span>
+            <h3>Build choreography</h3>
+            <p>
+              Specifications lock, subcontractors get a sermon on alignment, dust gets managed. Chaos is outsourced; tempo is ours.
+            </p>
+          </article>
+          <article class="timeline__item timeline__item--right">
+            <span class="timeline__dot"></span>
+            <span class="timeline__marker">Third</span>
+            <h3>Reveal &amp; reposition</h3>
+            <p>
+              Lens first, listing second—staging breathes, offers land. We stay through the awkward inspection questions you didn’t know buyers still ask.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section class="cta" id="contact">
-        <div class="wrap cta-inner">
-          <div>
+      <section class="cta cta--lux" id="contact">
+        <div class="wrap cta--lux__shell lux-reveal">
+          <div class="cta--lux__ornament" aria-hidden="true"></div>
+          <div class="cta-inner cta-inner--lux">
+            <div>
+            <p class="cta--lux__overline">Whisper or shout—either works</p>
             <h2>
               <span class="copy-if-personal"
-                ><span data-p-name></span>, have a lead or a property in mind?</span
-              ><span class="copy-if-generic">Have a lead or a property in mind?</span>
+                ><span data-p-name></span>, bring the lead, or bring the rumor of one</span
+              ><span class="copy-if-generic">Bring the lead, or bring the rumor of one</span>
             </h2>
             <p class="cta-sub">
-              Off-market opportunities, wholesaler introductions, and
-              collaboration welcome—reach out and we’ll respond within one
-              business day.
+              Whisper if it’s fragile. Shout if you’re ready. We thrive on introductions from humans who overheard conversations at Pilates
+              just as much as polished packets from brokers.
             </p>
           </div>
-          <div class="cta-actions">
-            <a class="btn btn-light" href="mailto:hello@movewellhome.com"
+          <div class="cta-actions cta-actions--lux">
+            <a class="btn btn-gold" href="mailto:hello@movewellhome.com"
               >hello@movewellhome.com</a
             >
-            <p class="cta-note">Replace with your real email before launch.</p>
+            <p class="cta-note">Replace with production email anytime.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -349,7 +382,7 @@
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <p class="footer-brand">Move Well · Home Transformations</p>
+        <p class="footer-brand">Move Well · Boutique residential redevelopment</p>
         <p class="footer-meta">© <span id="y"></span> · Mock preview site</p>
         <p class="footer-credit">Created by Ash Perry</p>
         <p class="footer-photos">
@@ -371,5 +404,6 @@
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
     <script src="personal.js" defer></script>
+    <script src="lux-motion.js" defer></script>
   </body>
 </html>
