@@ -576,7 +576,7 @@ a {
   max-width: 100%;
 }
 
-/* Inset mark: stacked wordmark · small emblem · floats at photo seam (replaces inset room photo) */
+/* Inset mark: wordmark + large emblem on the seam — no panel (shadow lives on the PNG) */
 .hero-split__overlap-brand {
   position: absolute;
   left: 0;
@@ -587,21 +587,19 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  width: clamp(148px, 20vw, 210px);
+  gap: clamp(0.45rem, 1.2vw, 0.85rem);
+  width: auto;
+  max-width: min(420px, 38vw);
   margin: 0;
-  padding: 0.75rem 0.65rem 0.85rem;
+  padding: 0;
   transform: translateX(-46%);
-  background: rgba(255, 255, 255, 0.97);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(var(--ink-rgb), 0.06);
-  box-shadow:
-    0 40px 70px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   text-decoration: none;
   color: var(--ink);
   animation: hero-overlap-brand-drift 14s ease-in-out infinite alternate;
-  transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 .hero-split__overlap-brand__titles {
@@ -614,20 +612,26 @@ a {
 
 .hero-split__overlap-brand .logo__name {
   font-family: var(--font-display);
-  font-size: clamp(0.92rem, 1.05vw + 0.76rem, 1.06rem);
+  font-size: clamp(1.05rem, 1.4vw + 0.85rem, 1.45rem);
   font-weight: 600;
   letter-spacing: 0.06em;
   line-height: 1.1;
   color: var(--ink);
+  text-shadow:
+    0 1px 0 rgba(var(--paper-rgb), 0.95),
+    0 2px 18px rgba(0, 0, 0, 0.22);
 }
 
 .hero-split__overlap-brand .logo__line2 {
   font-family: var(--font-body);
-  font-size: clamp(0.54rem, 0.35vw + 0.48rem, 0.62rem);
+  font-size: clamp(0.58rem, 0.45vw + 0.5rem, 0.72rem);
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(var(--ink-rgb), 0.82);
+  color: rgba(var(--ink-rgb), 0.88);
+  text-shadow:
+    0 1px 0 rgba(var(--paper-rgb), 0.9),
+    0 2px 14px rgba(0, 0, 0, 0.2);
 }
 
 .logo--hero-overlap .hero-split__overlap-brand__mark {
@@ -637,13 +641,15 @@ a {
 
 .logo--hero-overlap .hero-split__overlap-brand__mark .logo__brand-img {
   display: block;
-  height: clamp(30px, 3.4vw, 42px);
+  height: clamp(72px, 11vw, 132px);
   width: auto;
-  max-width: min(76px, 20vw);
+  max-width: min(220px, 32vw);
   object-fit: contain;
   transform-origin: 50% 50%;
   will-change: transform;
+  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.42)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
   animation: logo-brand-flip 8.2s cubic-bezier(0.55, 0.09, 0.36, 1) 1 both;
+  transition: filter 0.25s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -653,11 +659,8 @@ a {
   }
 }
 
-.hero-split__overlap-brand:hover {
-  border-color: rgba(var(--mustard-rgb), 0.42);
-  box-shadow:
-    0 44px 74px rgba(0, 0, 0, 0.38),
-    0 0 0 1px rgba(255, 255, 255, 0.14);
+.hero-split__overlap-brand:hover .logo__brand-img {
+  filter: drop-shadow(0 32px 52px rgba(0, 0, 0, 0.48)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.28));
 }
 
 .hero-split__overlap-brand:focus-visible {
@@ -789,8 +792,13 @@ a {
   .hero-split__overlap-brand {
     left: 50%;
     bottom: -2rem;
-    width: min(200px, 52vw);
+    max-width: min(360px, 86vw);
     transform: translateX(-50%);
+  }
+
+  .logo--hero-overlap .hero-split__overlap-brand__mark .logo__brand-img {
+    height: clamp(64px, 18vw, 108px);
+    max-width: min(200px, 58vw);
   }
 
   @keyframes hero-overlap-brand-drift {
