@@ -310,6 +310,14 @@ a {
   color: var(--ink-muted);
 }
 
+.logo--broker .logo__line2 {
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
 .logo-line1 {
   font-size: 1.15rem;
   text-transform: uppercase;
@@ -400,16 +408,16 @@ a {
 }
 
 @media (max-width: 900px) {
-  .logo--broker .logo__line2 {
-    display: none;
-  }
-
   .header-inner--broker {
     padding: 0.85rem 0;
   }
 
   .nav--broker {
     gap: 0.5rem;
+  }
+
+  .logo--broker .logo__line2 {
+    font-size: 0.68rem;
   }
 }
 
