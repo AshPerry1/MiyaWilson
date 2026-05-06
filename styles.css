@@ -6,12 +6,16 @@
 }
 
 :root {
-  /* Brand palette: Eggnog · Garnet · Mustard (+ copper, dust, velvet forest)
-     Eggnog = reserved cream for type on dark sections — not global page fill (avoids yellow cast). */
-  --eggnog: #fbedc3;
-  --eggnog-deep: #f3e6b0;
+  /* Brand: cream surfaces · garnet red + mustard yellow as accents everywhere */
+  --cream: #faf7ef;
+  --cream-soft: #f2ebe0;
+  --cream-muted: #e8dfd2;
+  /* Legacy names map to cream (avoid yellow “mustard wash” backgrounds) */
+  --eggnog: var(--cream);
+  --eggnog-deep: var(--cream-soft);
   --mustard: #ccb363;
   --mustard-rgb: 204, 179, 99;
+  --mustard-ink: #927825;
   --copper: #c27e35;
   --copper-rgb: 194, 126, 53;
   --dust: #6f7d7b;
@@ -20,18 +24,17 @@
   --velvet-forest: #1e3226;
   --velvet-rgb: 30, 50, 38;
 
-  /* Neutral warm canvas — reads as white, minimal yellow */
-  --canvas: #f7f6f3;
-  --canvas-deep: #ebe9e4;
-  --paper: var(--canvas);
-  --paper-dark: var(--canvas-deep);
-  --paper-rgb: 247, 246, 243;
-  --white: #fcfbf9;
-  /* Light copy only on velvet / charcoal panels (Eggnog luminance without yellowing global UI) */
-  --cream-rgb: 251, 237, 195;
+  --canvas: var(--cream);
+  --canvas-deep: var(--cream-soft);
+  --paper: var(--cream);
+  --paper-dark: var(--cream-soft);
+  --paper-rgb: 250, 247, 239;
+  --white: #fdfbf6;
+  /* Type on dark green panels */
+  --cream-rgb: 248, 244, 235;
 
-  --champagne: var(--eggnog);
-  --champagne-deep: var(--eggnog-deep);
+  --champagne: #f7f3ea;
+  --champagne-deep: #ebe3d6;
   --charcoal: var(--velvet-forest);
   --charcoal-muted: #5a6864;
   --gold: var(--mustard);
@@ -45,8 +48,8 @@
   --accent-soft: rgba(var(--garnet-rgb), 0.16);
   --accent-rgb: var(--garnet-rgb);
 
-  /* Hairlines / rules: dusty warm, not bright mustard */
-  --lux-line: #8f8573;
+  /* Rules / hairlines: mustard-forward */
+  --lux-line: var(--mustard);
   --btn-radius: 0;
   --radius: 10px;
   --radius-lg: 18px;
@@ -58,9 +61,9 @@
 
 /* Personalization: subtle canvas shifts · brand Garnet + Mustard unchanged */
 body.vibe-woman {
-  --paper-rgb: 249, 247, 244;
-  --paper: #f9f7f4;
-  --paper-dark: #f0eeea;
+  --paper-rgb: 251, 248, 242;
+  --paper: #fbf8f2;
+  --paper-dark: #f3ebe0;
   --ink: #1a2e24;
   --ink-rgb: 26, 46, 36;
   --ink-muted: #5f6e6b;
@@ -75,9 +78,9 @@ body.vibe-woman {
 }
 
 body.vibe-man {
-  --paper-rgb: 245, 244, 241;
-  --paper: #f5f4f1;
-  --paper-dark: #e9e8e4;
+  --paper-rgb: 249, 246, 240;
+  --paper: #f9f6f0;
+  --paper-dark: #efe8dd;
   --ink: var(--velvet-forest);
   --ink-rgb: var(--velvet-rgb);
   --ink-muted: #637371;
@@ -245,8 +248,12 @@ a {
 }
 
 .site-header--broker {
-  background: var(--eggnog);
+  background: var(--cream);
   backdrop-filter: none;
+  border-bottom-color: transparent;
+  box-shadow:
+    inset 0 -1px 0 rgba(var(--garnet-rgb), 0.12),
+    inset 0 -4px 0 rgba(var(--mustard-rgb), 0.22);
 }
 
 .header-inner {
@@ -315,7 +322,7 @@ a {
   letter-spacing: 0.04em;
   font-weight: 500;
   font-style: italic;
-  color: var(--ink-muted);
+  color: var(--mustard-ink);
 }
 
 .logo-line1 {
@@ -372,11 +379,13 @@ a {
 }
 
 .nav a:not(.nav-cta):hover {
-  color: var(--ink);
+  color: var(--garnet);
 }
 
-.nav-current {
-  color: var(--ink) !important;
+.nav-current,
+.nav a.nav-current {
+  color: var(--accent) !important;
+  font-weight: 600;
 }
 
 .nav-cta {
@@ -561,7 +570,9 @@ a {
 }
 
 .btn--hero-secondary:hover {
-  background: rgba(var(--ink-rgb), 0.04);
+  border-color: var(--mustard);
+  color: var(--garnet);
+  background: rgba(var(--mustard-rgb), 0.1);
 }
 
 /* —— Hero split (reference: Eggnog editorial / full-bleed photo + overlap) —— */
@@ -578,12 +589,12 @@ a {
 }
 
 .hero-split__copy {
-  background: var(--eggnog);
+  background: var(--cream);
   display: flex;
   align-items: center;
   padding: clamp(2.5rem, 7vw, 5.5rem) clamp(2rem, 8vw, 5rem)
     clamp(3rem, 8vw, 5.75rem);
-  border-right: 1px solid rgba(var(--velvet-rgb), 0.06);
+  border-right: 1px solid rgba(var(--garnet-rgb), 0.08);
 }
 
 .hero-split__copy-inner {
@@ -597,8 +608,10 @@ a {
 .hero-split__ribbon-inner {
   display: inline-flex;
   padding: 0.45rem 0.95rem;
-  background: rgba(var(--mustard-rgb), 0.24);
-  color: var(--ink);
+  background: rgba(var(--paper-rgb), 0.85);
+  border: 1px solid rgba(var(--mustard-rgb), 0.45);
+  border-left: 4px solid var(--garnet);
+  color: var(--garnet);
   font-family: var(--font-body);
   font-size: 0.61rem;
   font-weight: 700;
@@ -631,7 +644,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--dust);
+  color: var(--mustard-ink);
 }
 
 .hero-split__actions {
@@ -727,10 +740,10 @@ a {
   border-block: 1px solid rgba(var(--ink-rgb), 0.07);
   background: linear-gradient(
     100deg,
-    var(--paper-dark) 0%,
-    var(--paper) 48%,
-    #e6e4e0 74%,
-    var(--paper) 100%
+    var(--cream-soft) 0%,
+    var(--cream) 48%,
+    var(--cream-muted) 74%,
+    var(--cream) 100%
   );
   overflow: hidden;
 }
@@ -751,8 +764,8 @@ a {
   z-index: 1;
   margin: 0;
   max-width: 48rem;
-  padding-left: clamp(1rem, 4vw, 2.75rem);
-  border-left: 3px solid var(--accent);
+  padding-left: clamp(1.15rem, 4vw, 3rem);
+  border-left: none;
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3.8vw, 2.05rem);
   font-weight: 400;
@@ -760,6 +773,17 @@ a {
   line-height: 1.4;
   color: var(--ink);
   quotes: none;
+  background:
+    linear-gradient(
+      90deg,
+      var(--garnet) 0,
+      var(--garnet) 5px,
+      var(--mustard) 5px,
+      var(--mustard) 9px,
+      transparent 9px
+    )
+    repeat-y,
+    transparent;
 }
 
 /* —— Method (replacing pillar grid) —— */
@@ -769,8 +793,9 @@ a {
 
 .method__intro {
   padding-bottom: 2.75rem;
-  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
   margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  border-bottom: 1px solid rgba(var(--garnet-rgb), 0.15);
+  box-shadow: 0 1px 0 rgba(var(--mustard-rgb), 0.45);
 }
 
 .method__index {
@@ -824,11 +849,12 @@ a {
   width: calc(100% + 4rem);
   height: calc(100% + 4rem);
   max-height: none;
-  border: 1px solid var(--lux-line);
+  border: 1px solid rgba(var(--mustard-rgb), 0.55);
   border-radius: 4px;
-  opacity: 0.45;
+  opacity: 0.55;
   pointer-events: none;
   z-index: 0;
+  box-shadow: 0 0 0 1px rgba(var(--garnet-rgb), 0.12);
 }
 
 .method__figure img {
@@ -886,6 +912,8 @@ a {
 
 .method__item h3 {
   margin: 0 0 0.5rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--mustard);
   font-family: var(--font-display);
   font-size: 1.45rem;
   font-weight: 600;
@@ -907,10 +935,10 @@ a {
   background:
     linear-gradient(
       168deg,
-      var(--paper-dark) 0%,
-      var(--paper) 45%,
-      #e4e2dd 78%,
-      #dedbd6 100%
+      var(--cream-soft) 0%,
+      var(--cream) 42%,
+      var(--cream-muted) 82%,
+      var(--cream-soft) 100%
     );
 }
 
@@ -1051,7 +1079,8 @@ a {
     rgba(var(--velvet-rgb), 0.05) 0%,
     rgba(var(--garnet-rgb), 0.06) 100%
   );
-  border: 1px solid rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  border-top: 2px solid rgba(var(--mustard-rgb), 0.42);
   border-left: 3px solid var(--accent);
   color: var(--ink) !important;
 }
@@ -1136,11 +1165,6 @@ a {
   margin: 0;
 }
 
-.nav a.nav-current {
-  color: var(--accent);
-  font-weight: 600;
-}
-
 /* —— Feature (dark case study) —— */
 .feature--lux {
   padding: clamp(4.5rem, 11vw, 7rem) 0;
@@ -1151,7 +1175,8 @@ a {
     #17231c 100%
   );
   color: var(--champagne);
-  border-block: 1px solid rgba(var(--cream-rgb), 0.12);
+  border-top: 1px solid rgba(var(--mustard-rgb), 0.42);
+  border-bottom: 1px solid rgba(var(--garnet-rgb), 0.42);
 }
 
 .feature-inner--lux {
@@ -1177,7 +1202,7 @@ a {
 }
 
 .eyebrow--on-dark {
-  color: var(--copper);
+  color: var(--mustard);
   margin-bottom: 0.85rem;
 }
 
@@ -1307,7 +1332,7 @@ a {
 }
 
 .eyebrow--soft {
-  color: rgba(var(--accent-rgb), 0.75);
+  color: var(--mustard-ink);
   margin-bottom: 0.85rem;
 }
 
@@ -1343,13 +1368,15 @@ a {
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 1px;
-  margin-left: -0.5px;
+  width: 2px;
+  margin-left: -1px;
   background: linear-gradient(
     180deg,
-    transparent,
-    rgba(var(--accent-rgb), 0.25),
-    transparent
+    transparent 0%,
+    rgba(var(--mustard-rgb), 0.45) 30%,
+    rgba(var(--accent-rgb), 0.65) 50%,
+    rgba(var(--mustard-rgb), 0.45) 72%,
+    transparent 100%
   );
 }
 
@@ -1437,7 +1464,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--mustard-ink);
 }
 
 .timeline__item h3 {
@@ -1484,9 +1511,9 @@ a {
   position: absolute;
   inset: 0 auto auto 8%;
   width: min(520px, 70%);
-  height: 1px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  opacity: 0.45;
+  height: 2px;
+  background: linear-gradient(90deg, var(--mustard), var(--garnet), transparent);
+  opacity: 0.75;
 }
 
 .cta-inner--lux {
@@ -1560,9 +1587,25 @@ a {
 
 /* —— Footer —— */
 .site-footer {
+  position: relative;
   flex-shrink: 0;
   padding: 2rem 0 2.5rem;
-  border-top: 1px solid rgba(var(--ink-rgb), 0.09);
+  border-top: none;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--garnet) 0%,
+    var(--mustard) 42%,
+    rgba(var(--garnet-rgb), 0.35) 100%
+  );
 }
 
 .footer-inner {
@@ -1610,7 +1653,7 @@ a {
 }
 
 .footer-photos a:hover {
-  color: var(--ink);
+  color: var(--mustard-ink);
 }
 
 @media (max-width: 520px) {
@@ -1707,11 +1750,13 @@ body.vibe-gate-open {
 .vibe-gate-badge {
   display: inline-block;
   margin: 0 0 0.75rem;
+  padding: 0.38rem 0.75rem;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--garnet);
+  background: rgba(var(--mustard-rgb), 0.22);
 }
 
 .vibe-gate-card h2 {
