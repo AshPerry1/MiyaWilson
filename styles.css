@@ -576,74 +576,60 @@ a {
   max-width: 100%;
 }
 
-/* Inset mark: wordmark + large emblem on the seam — no panel (shadow lives on the PNG) */
-.hero-split__overlap-brand {
-  position: absolute;
-  left: 0;
-  bottom: clamp(10%, 15vh, 18%);
-  z-index: 5;
-  box-sizing: border-box;
+/* Homepage hero: centered mark only · frame matches former inset photo (width + 4:3) */
+.hero-split--logo-only {
+  margin: 0;
+}
+
+.hero-split__shell--logo-only {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: min(92vh, 860px);
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--cream);
+  border-bottom: 1px solid rgba(var(--garnet-rgb), 0.08);
+}
+
+.hero-split__overlap-brand.hero-split__overlap-brand--solo {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.45rem, 1.2vw, 0.85rem);
-  width: auto;
-  max-width: min(420px, 38vw);
+  box-sizing: border-box;
+  width: clamp(220px, 31vw, 380px);
+  max-width: min(380px, 92vw);
   margin: 0;
   padding: 0;
-  transform: translateX(-46%);
+  transform: none;
   background: none;
   border: none;
-  border-radius: 0;
   box-shadow: none;
   text-decoration: none;
   color: var(--ink);
-  animation: hero-overlap-brand-drift 14s ease-in-out infinite alternate;
+  animation: hero-logo-solo-drift 14s ease-in-out infinite alternate;
 }
 
-.hero-split__overlap-brand__titles {
+.hero-split__overlap-brand--solo .hero-split__overlap-brand__mark {
+  width: 100%;
+  aspect-ratio: 4 / 3;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.06rem;
-  text-align: center;
-}
-
-.hero-split__overlap-brand .logo__name {
-  font-family: var(--font-display);
-  font-size: clamp(1.05rem, 1.4vw + 0.85rem, 1.45rem);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1.1;
-  color: var(--ink);
-  text-shadow:
-    0 1px 0 rgba(var(--paper-rgb), 0.95),
-    0 2px 18px rgba(0, 0, 0, 0.22);
-}
-
-.hero-split__overlap-brand .logo__line2 {
-  font-family: var(--font-body);
-  font-size: clamp(0.58rem, 0.45vw + 0.5rem, 0.72rem);
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(var(--ink-rgb), 0.88);
-  text-shadow:
-    0 1px 0 rgba(var(--paper-rgb), 0.9),
-    0 2px 14px rgba(0, 0, 0, 0.2);
-}
-
-.logo--hero-overlap .hero-split__overlap-brand__mark {
+  justify-content: center;
   flex-shrink: 0;
   line-height: 0;
 }
 
-.logo--hero-overlap .hero-split__overlap-brand__mark .logo__brand-img {
+.hero-split__overlap-brand--solo .hero-split__overlap-brand__mark .logo__brand-img {
   display: block;
-  height: clamp(72px, 11vw, 132px);
   width: auto;
-  max-width: min(220px, 32vw);
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   transform-origin: 50% 50%;
   will-change: transform;
@@ -653,34 +639,32 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .logo--hero-overlap .hero-split__overlap-brand__mark .logo__brand-img {
+  .hero-split__overlap-brand--solo .hero-split__overlap-brand__mark .logo__brand-img {
     animation: none;
     transform: none;
   }
+
+  .hero-split__overlap-brand--solo {
+    animation: none;
+  }
 }
 
-.hero-split__overlap-brand:hover .logo__brand-img {
+.hero-split__overlap-brand--solo:hover .logo__brand-img {
   filter: drop-shadow(0 32px 52px rgba(0, 0, 0, 0.48)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.28));
 }
 
-.hero-split__overlap-brand:focus-visible {
+.hero-split__overlap-brand--solo:focus-visible {
   outline: 2px solid var(--garnet);
   outline-offset: 3px;
 }
 
-@keyframes hero-overlap-brand-drift {
+@keyframes hero-logo-solo-drift {
   0% {
-    transform: translateX(-46%) translate3d(-2px, -5px, 0);
+    transform: translate3d(-2px, -5px, 0);
   }
 
   100% {
-    transform: translateX(-46%) translate3d(2px, 5px, 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-split__overlap-brand {
-    animation: none;
+    transform: translate3d(2px, 5px, 0);
   }
 }
 
@@ -775,9 +759,18 @@ a {
 }
 
 @media (max-width: 900px) {
-  .hero-split__shell {
+  .hero-split__shell:not(.hero-split__shell--logo-only) {
     grid-template-columns: 1fr;
     min-height: 0;
+  }
+
+  .hero-split__shell--logo-only {
+    min-height: min(78vh, 720px);
+    padding-inline: clamp(1.25rem, 5vw, 2rem);
+  }
+
+  .hero-split__overlap-brand--solo {
+    width: min(340px, 88vw);
   }
 
   .hero-split__media {
@@ -787,28 +780,6 @@ a {
 
   .hero-split__figure--full img {
     min-height: min(56vh, 520px);
-  }
-
-  .hero-split__overlap-brand {
-    left: 50%;
-    bottom: -2rem;
-    max-width: min(360px, 86vw);
-    transform: translateX(-50%);
-  }
-
-  .logo--hero-overlap .hero-split__overlap-brand__mark .logo__brand-img {
-    height: clamp(64px, 18vw, 108px);
-    max-width: min(200px, 58vw);
-  }
-
-  @keyframes hero-overlap-brand-drift {
-    0% {
-      transform: translateX(-50%) translate3d(-2px, -5px, 0);
-    }
-
-    100% {
-      transform: translateX(-50%) translate3d(2px, 5px, 0);
-    }
   }
 
   .hero-split__copy {
