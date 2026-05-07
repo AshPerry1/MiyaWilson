@@ -122,7 +122,7 @@
     bubble(label, "user");
 
     var typingRow = typingIndicator();
-    delay(REDUCE_MOTION ? 0 : 420, function () {
+    delay(REDUCE_MOTION ? 0 : 1000, function () {
       removeTyping(typingRow);
       bubble(answerFor(id), "bot");
       chipsEl.querySelectorAll(".site-chat__chip").forEach(function (c) {
