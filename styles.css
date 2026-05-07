@@ -1069,7 +1069,7 @@ a {
   color: var(--ink-muted);
 }
 
-/* —— About me (neutral layer + geometric shapes) —— */
+/* —— About me (warm natural palette: forest + nude + mustard pop) —— */
 .about-pink {
   position: relative;
   padding: clamp(3.5rem, 9vw, 5.75rem) 0;
@@ -1077,10 +1077,10 @@ a {
   background:
     linear-gradient(
       168deg,
-      var(--cream-soft) 0%,
-      var(--cream) 42%,
-      var(--cream-muted) 82%,
-      var(--cream-soft) 100%
+      #efe4d8 0%,
+      #f6ede4 42%,
+      #e7dacb 82%,
+      #efe4d8 100%
     );
 }
 
@@ -1100,8 +1100,8 @@ a {
   right: min(-3rem, -6vw);
   width: min(52vw, 520px);
   height: 120%;
-  border: 1px solid rgba(var(--accent-rgb), 0.1);
-  background: rgba(var(--accent-rgb), 0.03);
+  border: 1px solid rgba(42, 74, 56, 0.16);
+  background: rgba(42, 74, 56, 0.08);
   transform: skewX(-6deg);
   transform-origin: top right;
 }
@@ -1111,7 +1111,7 @@ a {
   left: 6%;
   width: clamp(140px, 26vw, 280px);
   height: clamp(140px, 26vw, 280px);
-  border: 1px solid rgba(var(--ink-rgb), 0.14);
+  border: 1px solid rgba(42, 74, 56, 0.24);
   border-radius: 2px;
   opacity: 0.55;
 }
@@ -1124,8 +1124,8 @@ a {
   border-radius: 50%;
   background: linear-gradient(
     145deg,
-    rgba(var(--accent-rgb), 0.14),
-    rgba(var(--velvet-rgb), 0.06)
+    rgba(var(--mustard-rgb), 0.36),
+    rgba(42, 74, 56, 0.18)
   );
 }
 
@@ -1154,14 +1154,14 @@ a {
 }
 
 .about-pink__copy {
-  background: rgba(var(--paper-rgb), 0.78);
+  background: rgba(252, 247, 241, 0.84);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 2rem 2.35rem;
   border-radius: 3px;
-  border: 1px solid rgba(var(--ink-rgb), 0.08);
+  border: 1px solid rgba(42, 74, 56, 0.16);
   box-shadow:
-    0 12px 48px rgba(var(--velvet-rgb), 0.09),
+    0 12px 48px rgba(42, 74, 56, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
@@ -1171,7 +1171,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #2a4a38;
 }
 
 .about-pink__copy :is(h1, h2) {
@@ -1180,7 +1180,7 @@ a {
   font-weight: 600;
   line-height: 1.12;
   margin: 0 0 1.2rem;
-  color: var(--ink);
+  color: #2a4a38;
 }
 
 .about-pink--page {
@@ -1200,14 +1200,14 @@ a {
 
 .about-pink__lede {
   font-size: 1.08rem;
-  color: var(--ink);
+  color: #2a4a38;
   margin: 0 0 1.05rem !important;
   line-height: 1.6;
 }
 
 .about-pink__copy p:not(.about-pink__eyebrow):not(.about-pink__lede) {
   margin: 0 0 0.95rem;
-  color: var(--ink-muted);
+  color: #665652;
   line-height: 1.68;
 }
 
@@ -1218,17 +1218,17 @@ a {
   border-radius: 2px;
   background: linear-gradient(
     104deg,
-    rgba(var(--velvet-rgb), 0.05) 0%,
-    rgba(var(--garnet-rgb), 0.06) 100%
+    rgba(42, 74, 56, 0.1) 0%,
+    rgba(var(--mustard-rgb), 0.14) 100%
   );
-  border: 1px solid rgba(var(--accent-rgb), 0.15);
-  border-top: 2px solid rgba(var(--mustard-rgb), 0.42);
-  border-left: 3px solid var(--accent);
-  color: var(--ink) !important;
+  border: 1px solid rgba(42, 74, 56, 0.2);
+  border-top: 2px solid rgba(var(--mustard-rgb), 0.68);
+  border-left: 3px solid #2a4a38;
+  color: #2a4a38 !important;
 }
 
 .about-pink__tagline strong {
-  color: var(--accent);
+  color: #2a4a38;
 }
 
 .about-pink__photo {
@@ -1237,11 +1237,11 @@ a {
   max-width: 400px;
   border-radius: 3px;
   overflow: hidden;
-  border: 1px solid rgba(var(--ink-rgb), 0.1);
+  border: 1px solid rgba(42, 74, 56, 0.22);
   box-shadow:
-    0 32px 64px rgba(var(--velvet-rgb), 0.14),
-    0 0 0 1px rgba(var(--accent-rgb), 0.12);
-  background: linear-gradient(180deg, var(--canvas-deep), var(--paper));
+    0 32px 64px rgba(42, 74, 56, 0.16),
+    0 0 0 1px rgba(var(--mustard-rgb), 0.24);
+  background: linear-gradient(180deg, #eadbc9, #f8f1e8);
 }
 
 .about-pink__photo::before {
@@ -1250,7 +1250,7 @@ a {
   inset: 0 auto auto 0;
   width: 4px;
   height: min(52%, 220px);
-  background: linear-gradient(180deg, var(--accent), transparent);
+  background: linear-gradient(180deg, #d5ae49, transparent);
   z-index: 2;
   pointer-events: none;
 }
@@ -1269,9 +1269,9 @@ a {
   font-size: 0.82rem;
   text-align: center;
   font-weight: 500;
-  color: var(--ink-muted);
-  background: linear-gradient(180deg, rgba(229, 223, 214, 0.55), var(--paper));
-  border-top: 1px solid rgba(var(--ink-rgb), 0.06);
+  color: #645651;
+  background: linear-gradient(180deg, rgba(234, 223, 210, 0.65), #f8f1e8);
+  border-top: 1px solid rgba(42, 74, 56, 0.12);
 }
 
 .about-next {
