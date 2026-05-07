@@ -2,39 +2,39 @@
   var STEPS = [
     {
       id: "tour-entry",
-      title: "Glad you’re here",
+      title: "Quick orientation",
       text:
-        "Tiny guided spin through the site—no quizzes, no jargon map. Hit Next whenever you’re ready for the next beat.",
+        "Two-minute walkthrough: where to start, where to see transformations, and where to reach out when you’re ready.",
     },
     {
       id: "tour-hall",
-      title: "Our favorite soapbox",
+      title: "Studio point of view",
       text:
-        "We’re allergic to ‘cheap wow.’ If a buyer doesn’t slow down in the doorway, we keep fussing until they do.",
+        "This section sets the standard: calm finishes, honest scope, and no over-promised renovation story.",
     },
     {
       id: "tour-workshop",
-      title: "What we actually do",
+      title: "How the work runs",
       text:
-        "Buy quiet, renovate loud only where it earns out, stage with a light hand—then resell with receipts instead of adjectives.",
+        "Acquisition, transformation, and reveal in one sequence so you can understand the operating rhythm quickly.",
     },
     {
       id: "work",
-      title: "Receipts, not flexing",
+      title: "Transformation examples",
       text:
-        "Before and after share the same footprint here—same bones, braver story. It’s the shortest path to ‘oh, I get it.’",
+        "Before-and-after snapshots show how each project moves from dated to market-ready without cutting corners.",
     },
     {
       id: "process",
-      title: "Always three beats",
+      title: "Timeline at a glance",
       text:
-        "Discovery, build, reveal—repeat until it’s almost boring in the best way. You always know which chapter we’re in.",
+        "This timeline explains what happens first, second, and third so expectations are clear before work starts.",
     },
     {
       id: "contact",
-      title: "Now the fun part",
+      title: "Ready to talk",
       text:
-        "That was the highlights reel. Got a lead, a rumor, or a tired house? Whisper or shout—we read the real mail.",
+        "Use this section to send a lead or ask about a property. Tour complete.",
     },
   ];
 
@@ -80,9 +80,9 @@
     }
     titleEl.textContent = step.title;
     textEl.textContent = step.text;
-    stepLabel.textContent = "Spin " + (i + 1) + " · " + STEPS.length;
+    stepLabel.textContent = "Stop " + (i + 1) + " of " + STEPS.length;
     prevBtn.disabled = i === 0;
-    nextBtn.textContent = i === STEPS.length - 1 ? "That’s the tour" : "Next";
+    nextBtn.textContent = i === STEPS.length - 1 ? "Finish tour" : "Next stop";
   }
 
   function openTour() {
@@ -147,13 +147,13 @@
     endBtn = document.createElement("button");
     endBtn.type = "button";
     endBtn.className = "home-tour__btn home-tour__btn--ghost";
-    endBtn.textContent = "Exit";
+    endBtn.textContent = "End tour";
     endBtn.addEventListener("click", closeTour);
 
     prevBtn = document.createElement("button");
     prevBtn.type = "button";
     prevBtn.className = "home-tour__btn home-tour__btn--ghost";
-    prevBtn.textContent = "Back";
+    prevBtn.textContent = "Previous";
     prevBtn.addEventListener("click", prev);
 
     nextBtn = document.createElement("button");
@@ -182,17 +182,9 @@
   }
 
   document.addEventListener("click", function (e) {
-    var trigger = e.target.closest("[data-home-tour]");
-    if (!trigger) return;
-    var onHome = !!document.getElementById("tour-entry");
-    if (onHome) {
+    if (e.target.closest("[data-home-tour]")) {
       e.preventDefault();
       openTour();
-      return;
-    }
-    if (trigger.tagName !== "A" || !trigger.getAttribute("href")) {
-      e.preventDefault();
-      window.location.href = "index.html?homeTour=1";
     }
   });
 
