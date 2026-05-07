@@ -419,6 +419,39 @@ a {
   }
 }
 
+@media (max-width: 420px) {
+  .header-inner--broker {
+    gap: 0.55rem;
+  }
+
+  .logo--broker {
+    gap: 0.45rem;
+  }
+
+  .logo__brand-img {
+    height: 38px;
+    max-width: 82px;
+  }
+
+  .logo--broker .logo__name {
+    font-size: 0.9rem;
+  }
+
+  .logo--broker .logo__line2 {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 0.54rem 0.76rem;
+    font-size: 0.61rem;
+  }
+
+  .nav-tour {
+    font-size: 0.59rem;
+    padding: 0.5rem 0.58rem;
+  }
+}
+
 /* Shared UI */
 .eyebrow {
   font-size: 0.68rem;
