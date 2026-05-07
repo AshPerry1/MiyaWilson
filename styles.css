@@ -1307,6 +1307,211 @@ a {
   margin: 0;
 }
 
+/* —— Kits teaser (homepage) —— */
+.kits-teaser {
+  padding: clamp(3rem, 7vw, 4.75rem) 0;
+  background: linear-gradient(145deg, #f6eee5 0%, #f2e7dc 55%, #efe3d6 100%);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.08);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
+}
+
+.kits-teaser__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 1.5rem 2rem;
+  align-items: center;
+}
+
+.kits-teaser__eyebrow {
+  margin: 0 0 0.55rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--garnet);
+}
+
+.kits-teaser__copy h2 {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.8vw, 2.3rem);
+  line-height: 1.14;
+}
+
+.kits-teaser__copy p {
+  margin: 0;
+  max-width: 40ch;
+  color: var(--ink-muted);
+}
+
+.kits-teaser__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.7rem;
+}
+
+/* —— Kits page —— */
+.kits-page {
+  background: linear-gradient(180deg, #fbf6ef 0%, #f5ece2 45%, #f8efe5 100%);
+}
+
+.kits-hero {
+  padding: clamp(3.4rem, 9vw, 5.75rem) 0 clamp(2.35rem, 6vw, 3.5rem);
+}
+
+.kits-hero__inner {
+  max-width: 56rem;
+}
+
+.kits-hero__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--garnet);
+}
+
+.kits-hero h1 {
+  margin: 0 0 0.95rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.8vw, 3.3rem);
+  line-height: 1.08;
+}
+
+.kits-hero__dek {
+  margin: 0;
+  max-width: 44ch;
+  color: var(--ink-muted);
+}
+
+.kits-grid {
+  padding: 0 0 clamp(2.2rem, 7vw, 3.25rem);
+}
+
+.kits-grid__inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.kits-card {
+  background: rgba(253, 248, 241, 0.88);
+  border: 1px solid rgba(var(--ink-rgb), 0.14);
+  border-left: 3px solid var(--mustard);
+  border-radius: 8px;
+  padding: 1.1rem 1.1rem 1.2rem;
+  box-shadow: 0 12px 36px rgba(var(--velvet-rgb), 0.09);
+}
+
+.kits-card h2,
+.kits-card h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.kits-card h3 {
+  font-size: 1.2rem;
+}
+
+.kits-card p {
+  margin: 0 0 0.7rem;
+  color: var(--ink-muted);
+}
+
+.kits-card__price {
+  margin: 0;
+  font-weight: 700;
+  color: var(--garnet);
+  letter-spacing: 0.03em;
+}
+
+.kits-coaching {
+  padding: clamp(2.25rem, 7vw, 3.75rem) 0;
+  background: radial-gradient(ellipse at 22% 10%, rgba(var(--mustard-rgb), 0.22), transparent 42%),
+    linear-gradient(180deg, #f0e4d7 0%, #f7eee5 100%);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.08);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
+}
+
+.kits-coaching__intro {
+  margin-bottom: 1.25rem;
+}
+
+.kits-coaching__intro h2 {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.kits-coaching__intro p {
+  margin: 0;
+  max-width: 44ch;
+  color: var(--ink-muted);
+}
+
+.kits-grid__inner--coaching {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kits-webinars {
+  padding: clamp(2.5rem, 7vw, 4rem) 0 clamp(3rem, 8vw, 5rem);
+}
+
+.kits-webinars__inner {
+  background: rgba(252, 246, 237, 0.9);
+  border: 1px solid rgba(var(--ink-rgb), 0.12);
+  border-radius: 8px;
+  padding: clamp(1.3rem, 4vw, 2rem);
+  box-shadow: 0 12px 34px rgba(var(--velvet-rgb), 0.08);
+}
+
+.kits-webinars__inner h2 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.kits-webinars__inner p {
+  margin: 0 0 0.7rem;
+  color: var(--ink-muted);
+}
+
+.kits-webinars__inner ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--ink);
+}
+
+.kits-webinars__inner li {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 980px) {
+  .kits-grid__inner,
+  .kits-grid__inner--coaching {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kits-teaser__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .kits-grid__inner,
+  .kits-grid__inner--coaching {
+    grid-template-columns: 1fr;
+  }
+
+  .kits-teaser__actions .btn {
+    width: 100%;
+  }
+}
+
 /* —— Feature (dark case study) —— */
 .feature--lux {
   padding: clamp(4.5rem, 11vw, 7rem) 0;
