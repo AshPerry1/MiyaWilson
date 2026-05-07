@@ -4,7 +4,7 @@
     REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   } catch (e) {}
 
-  var BOT_NAME = "Move Wise guide";
+  var BOT_NAME = "Home concierge";
 
   var PROMPTS = [
     {
@@ -41,7 +41,7 @@
       id: "tour",
       label: "Walk me through the site",
       reply:
-        "On the homepage, tap “Quick spin” in the top nav for a short guided walk through the page. It’s scripted, not AI—just a fast orientation.",
+        "On the homepage, tap “Take a home tour” for a short guided walk through the page. It’s scripted, not AI—just a fast orientation.",
     },
   ];
 
@@ -176,7 +176,7 @@
       '<p class="site-chat__kicker" id="site-chat-title">' +
       BOT_NAME +
       "</p>" +
-      '<p class="site-chat__sub">Quick answers from a fixed menu—not a connected live chat.</p>' +
+      '<p class="site-chat__sub">Tap a prompt below for instant answers. This is scripted on-page, not a live AI chat.</p>' +
       "</div>";
 
     var closeBtn = document.createElement("button");
