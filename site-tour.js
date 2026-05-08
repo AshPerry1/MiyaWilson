@@ -4,25 +4,25 @@
       id: "tour-entry",
       title: "Quick orientation",
       text:
-        "Two-minute walkthrough: where to start, where to see transformations, and where to reach out when you’re ready.",
+        "Two-minute walkthrough: where to start, what Miya offers, and how to reach out when you are ready.",
     },
     {
       id: "tour-hall",
-      title: "Studio point of view",
+      title: "How Miya works",
       text:
-        "This section sets the standard: calm finishes, honest scope, and no over-promised renovation story.",
+        "This section explains the service approach: clear expectations, practical guidance, and steady communication.",
     },
     {
       id: "tour-workshop",
       title: "How the work runs",
       text:
-        "Acquisition, transformation, and reveal in one sequence so you can understand the operating rhythm quickly.",
+        "A quick look at how clients and new agents move from questions to a more organized plan.",
     },
     {
       id: "work",
-      title: "Transformation examples",
+      title: "Service examples",
       text:
-        "Before-and-after snapshots show how each project moves from dated to market-ready without cutting corners.",
+        "Use these examples to see the kind of support available for buying, selling, investing, and agent coaching.",
     },
     {
       id: "process",
@@ -34,7 +34,7 @@
       id: "contact",
       title: "Ready to talk",
       text:
-        "Use this section to send a lead or ask about a property. Tour complete.",
+        "Use this section to ask a question or start a conversation. Tour complete.",
     },
   ];
 
