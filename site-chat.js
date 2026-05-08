@@ -41,7 +41,7 @@
       id: "tour",
       label: "How do I navigate quickly?",
       reply:
-        "Use the top navigation to jump straight to About, Kits, and core homepage sections. If you want a fast overview, start with Projects and then Contact.",
+        "Use the top navigation for Agent coaching and resources, Buying/selling a home, About, and FAQ. Coaching and resources open on the Kits page; the rest are their own pages.",
     },
   ];
 
