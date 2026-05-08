@@ -653,6 +653,24 @@ a {
   background: rgba(var(--mustard-rgb), 0.1);
 }
 
+/* —— Home page: white canvas (header + hero copy match) —— */
+body.home-page {
+  background: #fff;
+}
+
+body.home-page .site-header--broker {
+  background: #fff;
+}
+
+body.home-page #main-content {
+  background: #fff;
+}
+
+body.home-page .hero-split__copy {
+  background: #fff;
+  border-right: 1px solid rgba(var(--ink-rgb), 0.06);
+}
+
 /* —— Hero split (reference: Eggnog editorial / full-bleed photo + overlap) —— */
 .hero-split {
   position: relative;
