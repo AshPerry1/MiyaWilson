@@ -776,7 +776,7 @@ a {
 }
 
 .hero-split__copy-inner {
-  width: min(43rem, 100%);
+  width: min(39rem, 100%);
   margin-inline: auto;
   text-align: left;
 }
@@ -803,23 +803,23 @@ a {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: clamp(2.75rem, 5.25vw + 0.65rem, 4.85rem);
-  line-height: 1.06;
-  letter-spacing: -0.03em;
-  margin: 0 0 clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(1.65rem, 3.5vw, 2.35rem);
   color: var(--ink);
 }
 
 .hero-split__dek {
-  margin: 0 0 1rem;
-  max-width: 48ch;
+  margin: 0 0 1.45rem;
+  max-width: 42ch;
   font-size: clamp(1.02rem, 1vw + 0.94rem, 1.125rem);
-  line-height: 1.72;
+  line-height: 1.82;
   color: rgba(var(--velvet-rgb), 0.85);
   margin-inline: 0;
 }
 
 .hero-split__stat-line {
-  margin: 1.65rem 0 0;
+  margin: 2.1rem 0 0;
   font-family: var(--font-body);
   font-size: 0.74rem;
   font-weight: 600;
@@ -834,7 +834,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-  margin-top: clamp(2rem, 4vw, 2.75rem);
+  margin-top: clamp(2.35rem, 4.5vw, 3.15rem);
 }
 
 .hero-split__media {
