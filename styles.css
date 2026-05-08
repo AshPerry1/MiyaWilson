@@ -1929,8 +1929,8 @@ a {
   padding: 2.6rem 0 max(1.35rem, calc(1.35rem + env(safe-area-inset-bottom, 0px)));
   padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
   border-top: none;
-  background: radial-gradient(120% 180% at 10% 0%, rgba(var(--garnet-rgb), 0.18) 0%, transparent 45%),
-    linear-gradient(145deg, #0f1116 0%, #131720 46%, #0e1118 100%);
+  background: radial-gradient(120% 180% at 10% 0%, rgba(var(--mustard-rgb), 0.16) 0%, transparent 45%),
+    linear-gradient(145deg, #3f3731 0%, #4b423a 46%, #362f2a 100%);
 }
 
 .site-footer::before {
@@ -1955,7 +1955,7 @@ a {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .footer-inner {
