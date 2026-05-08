@@ -770,7 +770,7 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: clamp(1.8rem, 4.2vw, 3.2rem) clamp(2rem, 8vw, 5rem)
+  padding: clamp(2.8rem, 6vw, 4.4rem) clamp(2rem, 8vw, 5rem)
     clamp(2.6rem, 6vw, 4.1rem);
   border-right: 1px solid rgba(var(--garnet-rgb), 0.08);
 }
@@ -869,7 +869,7 @@ a {
   width: clamp(320px, 64%, 680px);
   height: auto;
   max-height: min(66vh, 460px);
-  left: 24%;
+  left: 50%;
   bottom: clamp(1.2rem, 5vw, 4.5rem);
   min-height: 0;
   object-fit: cover;
