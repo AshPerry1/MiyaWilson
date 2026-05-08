@@ -25,12 +25,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="faq-page-view">
     <div class="site-top">
       <div class="site-utility" aria-label="Contact shortcuts">
         <div class="wrap site-utility__inner">
@@ -93,153 +93,171 @@
       </header>
     </div>
 
-    <main id="main-content" class="page-about-main">
-      <section class="about-pink about-pink--page" aria-labelledby="faq-heading">
-        <div class="about-pink__geo" aria-hidden="true">
-          <span class="about-geo__shape about-geo__shape--slant"></span>
-          <span class="about-geo__shape about-geo__shape--frame"></span>
-          <span class="about-geo__shape about-geo__shape--disc"></span>
+    <main id="main-content">
+      <div class="wrap">
+        <header class="faq-hero" aria-labelledby="faq-heading">
+          <div class="faq-hero__inner">
+            <h1 id="faq-heading" class="faq-hero__title">Frequently Asked Questions</h1>
+            <p class="faq-hero__dek">
+              Payments, coaching, the homebuyer workshop, refunds, and more—browse by topic or search. Reach out anytime if you prefer to
+              talk it through.
+            </p>
+            <div class="faq-hero__search">
+              <label class="visually-hidden" for="faq-search-input">Search questions</label>
+              <input
+                id="faq-search-input"
+                type="search"
+                autocomplete="off"
+                placeholder="Search questions…"
+                enterkeyhint="search"
+              />
+            </div>
+          </div>
+        </header>
+
+        <div class="faq-shell" id="faq-modern">
+          <div class="faq-shell__cta">
+            <a class="btn btn-primary btn--hero-contact" href="tel:+12059949499">Call (205) 994-9499</a>
+            <a class="btn btn-ghost btn--hero-secondary" href="mailto:Miya.Wilson@outlook.com">Email Miya</a>
+          </div>
+
+          <nav class="faq-filter" aria-label="FAQ categories">
+            <button type="button" class="faq-filter__btn is-active" data-faq-filter="all">All questions</button>
+            <button type="button" class="faq-filter__btn" data-faq-filter="coaching">Coaching</button>
+            <button type="button" class="faq-filter__btn" data-faq-filter="payments">Payments</button>
+            <button type="button" class="faq-filter__btn" data-faq-filter="workshop">Workshop</button>
+            <button type="button" class="faq-filter__btn" data-faq-filter="policies">Policies</button>
+          </nav>
+
+          <p class="faq-modern__notice" role="status" aria-live="polite">No questions match those filters.</p>
+
+          <section class="faq-group" data-group="payments" aria-labelledby="faq-group-pay">
+            <h2 id="faq-group-pay" class="faq-group__title">Payments</h2>
+            <details class="faq-item" data-category="payments">
+              <summary>How do we pay for the products and services?</summary>
+              <div class="faq-item__body">
+                <p>Zelle, Apple Pay, or Cash App are the only three preferred payment methods at this time.</p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="payments">
+              <summary>How do I pay for the homebuying workshop?</summary>
+              <div class="faq-item__body">
+                <p>You will pay Norluxe Realty directly through the link provided.</p>
+              </div>
+            </details>
+          </section>
+
+          <section class="faq-group" data-group="coaching" aria-labelledby="faq-group-coach">
+            <h2 id="faq-group-coach" class="faq-group__title">Agent coaching</h2>
+            <details class="faq-item" data-category="coaching">
+              <summary>Who is MoveWise Agent Coaching for?</summary>
+              <div class="faq-item__body">
+                <p>
+                  MoveWise coaching is designed for new and developing real estate agents who want structure, confidence, and consistent
+                  closings. It’s for agents who are serious about building a real business.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="coaching">
+              <summary>Do I already need to be licensed to join?</summary>
+              <div class="faq-item__body">
+                <p>
+                  No. Pre-licensed individuals can join to prepare, but the coaching is most powerful for active agents ready to start generating
+                  leads and working with clients.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="coaching">
+              <summary>What will I actually learn in coaching?</summary>
+              <div class="faq-item__body">
+                <p>You’ll learn the practical side of real estate that most programs don’t teach, including:</p>
+                <ul>
+                  <li>Lead generation strategies that actually work</li>
+                  <li>How to convert conversations into clients</li>
+                  <li>Listing and buyer consultation structure</li>
+                  <li>Social media marketing for real estate</li>
+                  <li>Daily systems to stay consistent and productive</li>
+                </ul>
+              </div>
+            </details>
+            <details class="faq-item" data-category="coaching">
+              <summary>How is this different from real estate school or other courses?</summary>
+              <div class="faq-item__body">
+                <p>
+                  Real estate school teaches you how to pass the exam. MoveWise coaching teaches you how to actually build a business, get
+                  clients, and close deals in the real world.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="coaching">
+              <summary>How quickly can I see results?</summary>
+              <div class="faq-item__body">
+                <p>
+                  Results depend on consistency and execution, but most agents begin seeing momentum within 30–60 days when they apply the
+                  systems consistently.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="coaching">
+              <summary>What’s the difference in coaching selections?</summary>
+              <div class="faq-item__body">
+                <p>
+                  Group coaching is for realtor friends, family, or teams who want to do this together. One-on-one is private coaching that offers
+                  more personalized strategies and support. VIP Intensive includes private coaching, field activities, digital tools, and more.
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="faq-group" data-group="workshop" aria-labelledby="faq-group-workshop">
+            <h2 id="faq-group-workshop" class="faq-group__title">Homebuyer workshop</h2>
+            <details class="faq-item" data-category="workshop">
+              <summary>What is the homebuyer workshop?</summary>
+              <div class="faq-item__body">
+                <p>
+                  The MoveWise Homebuyer Workshop is a fully refundable guided experience designed to help buyers understand the home purchasing
+                  process from start to finish without confusion, pressure, or overwhelm. This is for homebuyers who are not yet fully ready to
+                  buy, due to needing credit help and financial guidance. The workshop offers a 6-month plan and a 12+ month plan.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="workshop">
+              <summary>When do I get refunded for the homebuyer workshop?</summary>
+              <div class="faq-item__body">
+                <p>
+                  After closing, when you get the keys to your home, depending on your plan. If you do not close within your plan expiration
+                  date—or within 30 days after—you will not receive a refund.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="workshop">
+              <summary>What should I bring or prepare for the homebuying workshop?</summary>
+              <div class="faq-item__body">
+                <p>
+                  Just bring your questions and an idea of your homebuying timeline. If you have credit or financial concerns, those are
+                  welcomed too.
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="faq-group" data-group="policies" aria-labelledby="faq-group-policies">
+            <h2 id="faq-group-policies" class="faq-group__title">Policies</h2>
+            <details class="faq-item" data-category="policies">
+              <summary>Can you provide advice for any of my current transactions?</summary>
+              <div class="faq-item__body">
+                <p>We cannot advise on specific contracts or transactions for agents as this constitutes acting as a broker without authority.</p>
+              </div>
+            </details>
+            <details class="faq-item" data-category="policies">
+              <summary>Is the coaching a brokerage service through Norluxe Realty?</summary>
+              <div class="faq-item__body">
+                <p>No. This is an independent coaching service through MoveWise LLC and not a licensed real estate activity.</p>
+              </div>
+            </details>
+          </section>
         </div>
-        <div class="wrap about-pink__inner">
-          <div class="about-pink__copy">
-            <p class="about-pink__eyebrow">Help</p>
-            <h1 id="faq-heading">Frequently asked questions</h1>
-            <p class="about-pink__lede">
-              Payments, coaching, the homebuyer workshop, refunds, and more—scroll for answers or reach out anytime.
-            </p>
-            <p class="about-pink__tagline">
-              <a class="btn btn-primary" href="tel:+12059949499">Call (205) 994-9499</a>
-              <a class="btn btn-ghost about-next__btn-ghost" href="mailto:Miya.Wilson@outlook.com">Email Miya</a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="faq-page__topics wrap" aria-label="FAQ questions and answers">
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">How do we pay for the products and services?</h2>
-          <div class="faq-topic__a">
-            <p>Zelle, Apple Pay, or Cash App are the only three preferred payment methods at this time.</p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">Who is MoveWise Agent Coaching for?</h2>
-          <div class="faq-topic__a">
-            <p>
-              MoveWise coaching is designed for new and developing real estate agents who want structure, confidence, and consistent closings.
-              It’s for agents who are serious about building a real business.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">Do I already need to be licensed to join?</h2>
-          <div class="faq-topic__a">
-            <p>
-              No. Pre-licensed individuals can join to prepare, but the coaching is most powerful for active agents ready to start generating
-              leads and working with clients.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">What will I actually learn in coaching?</h2>
-          <div class="faq-topic__a">
-            <p>You’ll learn the practical side of real estate that most programs don’t teach, including:</p>
-            <ul>
-              <li>Lead generation strategies that actually work</li>
-              <li>How to convert conversations into clients</li>
-              <li>Listing and buyer consultation structure</li>
-              <li>Social media marketing for real estate</li>
-              <li>Daily systems to stay consistent and productive</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">How is this different from real estate school or other courses?</h2>
-          <div class="faq-topic__a">
-            <p>
-              Real estate school teaches you how to pass the exam. MoveWise coaching teaches you how to actually build a business, get
-              clients, and close deals in the real world.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">How quickly can I see results?</h2>
-          <div class="faq-topic__a">
-            <p>
-              Results depend on consistency and execution, but most agents begin seeing momentum within 30–60 days when they apply the
-              systems consistently.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">What’s the difference in coaching selections?</h2>
-          <div class="faq-topic__a">
-            <p>
-              Group coaching is for realtor friends, family, or teams who want to do this together. One-on-one is private coaching that
-              offers more personalized strategies and support. VIP Intensive includes private coaching, field activities, digital tools,
-              and more.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">What is the homebuyer workshop?</h2>
-          <div class="faq-topic__a">
-            <p>
-              The MoveWise Homebuyer Workshop is a fully refundable guided experience designed to help buyers understand the home purchasing
-              process from start to finish without confusion, pressure, or overwhelm. This is for homebuyers who are not yet fully ready to buy,
-              due to needing credit help and financial guidance. The workshop offers a 6-month plan and a 12+ month plan.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">When do I get refunded for the homebuyer workshop?</h2>
-          <div class="faq-topic__a">
-            <p>
-              After closing, when you get the keys to your home, depending on your plan. If you do not close within your plan expiration
-              date—or within 30 days after—you will not receive a refund.
-            </p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">Can you provide advice for any of my current transactions?</h2>
-          <div class="faq-topic__a">
-            <p>We cannot advise on specific contracts or transactions for agents as this constitutes acting as a broker without authority.</p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">Is the coaching a brokerage service through Norluxe Realty?</h2>
-          <div class="faq-topic__a">
-            <p>No. This is an independent coaching service through MoveWise LLC and not a licensed real estate activity.</p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">How do I pay for the homebuying workshop?</h2>
-          <div class="faq-topic__a">
-            <p>You will pay Norluxe Realty directly through the link provided.</p>
-          </div>
-        </article>
-
-        <article class="faq-topic">
-          <h2 class="faq-topic__q">What should I bring or prepare for the homebuying workshop?</h2>
-          <div class="faq-topic__a">
-            <p>
-              Just bring your questions and an idea of your homebuying timeline. If you have credit or financial concerns, those are
-              welcomed too.
-            </p>
-          </div>
-        </article>
-      </section>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -272,6 +290,67 @@
 
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      (function () {
+        var root = document.getElementById("faq-modern");
+        if (!root) return;
+        var items = Array.prototype.slice.call(root.querySelectorAll(".faq-item"));
+        var groups = Array.prototype.slice.call(root.querySelectorAll(".faq-group"));
+        var filterBtns = Array.prototype.slice.call(root.querySelectorAll("[data-faq-filter]"));
+        var searchEl = document.getElementById("faq-search-input");
+        var emptyMsg = root.querySelector(".faq-modern__notice");
+        var activeCat = "all";
+
+        function syncGroups() {
+          groups.forEach(function (g) {
+            var visible = Array.prototype.slice
+              .call(g.querySelectorAll(".faq-item"))
+              .some(function (el) {
+                return !el.classList.contains("is-hidden");
+              });
+            g.classList.toggle("is-empty", !visible);
+          });
+          var anyOpen = items.some(function (el) {
+            return !el.classList.contains("is-hidden");
+          });
+          if (emptyMsg) emptyMsg.classList.toggle("is-visible", !anyOpen);
+        }
+
+        function applyFilters() {
+          var q = (searchEl && searchEl.value ? searchEl.value : "").trim().toLowerCase();
+          items.forEach(function (el) {
+            var cat = el.getAttribute("data-category") || "";
+            var catOk = activeCat === "all" || cat === activeCat;
+            var hay = el.textContent.toLowerCase();
+            var searchOk = !q || hay.indexOf(q) !== -1;
+            el.classList.toggle("is-hidden", !(catOk && searchOk));
+          });
+          syncGroups();
+        }
+
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            activeCat = btn.getAttribute("data-faq-filter") || "all";
+            filterBtns.forEach(function (b) {
+              b.classList.toggle("is-active", b === btn);
+            });
+            applyFilters();
+          });
+        });
+
+        if (searchEl) {
+          searchEl.addEventListener("input", applyFilters);
+          searchEl.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+              searchEl.value = "";
+              applyFilters();
+            }
+          });
+        }
+
+        applyFilters();
+      })();
     </script>
     <script src="mobile-nav.js" defer></script>
     <script src="site-chat.js" defer></script>
