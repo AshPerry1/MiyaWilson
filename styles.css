@@ -7,9 +7,9 @@
 
 :root {
   /* Brand: cream surfaces · deep luxury red + mustard accents */
-  --cream: #faf7ef;
-  --cream-soft: #f2ebe0;
-  --cream-muted: #e8dfd2;
+  --cream: #f1f0ee;
+  --cream-soft: #e6e4e1;
+  --cream-muted: #d8d5d1;
   /* Legacy names map to cream (avoid yellow “mustard wash” backgrounds) */
   --eggnog: var(--cream);
   --eggnog-deep: var(--cream-soft);
@@ -34,13 +34,13 @@
   --canvas-deep: var(--cream-soft);
   --paper: var(--cream);
   --paper-dark: var(--cream-soft);
-  --paper-rgb: 250, 247, 239;
-  --white: #fdfbf6;
+  --paper-rgb: 241, 240, 238;
+  --white: #f7f6f4;
   /* Type on dark cranberry panels */
   --cream-rgb: 248, 244, 235;
 
-  --champagne: #f7f3ea;
-  --champagne-deep: #ebe3d6;
+  --champagne: #efeeec;
+  --champagne-deep: #dfdcd8;
   --charcoal: var(--velvet-forest);
   --charcoal-muted: #6f5a63;
   --gold: var(--mustard);
