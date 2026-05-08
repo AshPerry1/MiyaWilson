@@ -778,6 +778,7 @@ a {
 .hero-split__copy-inner {
   width: min(43rem, 100%);
   margin-inline: auto;
+  text-align: center;
 }
 
 .hero-split__ribbon {
@@ -814,6 +815,7 @@ a {
   font-size: clamp(1.02rem, 1vw + 0.94rem, 1.125rem);
   line-height: 1.72;
   color: rgba(var(--velvet-rgb), 0.85);
+  margin-inline: auto;
 }
 
 .hero-split__stat-line {
@@ -830,6 +832,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin-top: clamp(2rem, 4vw, 2.75rem);
 }
@@ -876,7 +879,7 @@ a {
   border: 2px solid rgba(245, 245, 245, 0.6);
   box-shadow: 0 28px 55px rgba(6, 7, 11, 0.5);
   filter: saturate(1.08);
-  transform: translateX(-50%);
+  transform: translateX(-58%);
   z-index: 2;
 }
 
