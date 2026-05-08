@@ -64,8 +64,8 @@
   --radius: 10px;
   --radius-lg: 18px;
   --shadow: 0 32px 64px rgba(var(--velvet-rgb), 0.14);
-  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: "Outfit", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
   --max: 1140px;
 }
 
@@ -948,13 +948,15 @@ body.home-page .hero-split__copy {
 
 .hero-split h1 {
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(2.65rem, 5.05vw + 0.62rem, 4.65rem);
-  line-height: 1.11;
-  letter-spacing: -0.028em;
+  font-weight: 600;
+  font-size: clamp(2.45rem, 4.75vw + 0.55rem, 4.35rem);
+  line-height: 1.06;
+  letter-spacing: -0.038em;
   margin: 0 0 clamp(1.65rem, 3.5vw, 2.35rem);
   color: var(--ink);
   text-wrap: balance;
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  font-optical-sizing: auto;
 }
 
 .hero-split__dek {
