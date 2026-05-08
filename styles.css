@@ -81,6 +81,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -91,8 +93,10 @@ body {
   min-height: 100dvh;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.72;
+  letter-spacing: -0.011em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -352,10 +356,10 @@ a {
 
 .nav--broker {
   gap: clamp(1rem, 2.8vw, 2rem);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  text-transform: none;
 }
 
 .nav-toggle {
@@ -392,6 +396,7 @@ a {
 .nav a.nav-current {
   color: var(--accent) !important;
   font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .nav-cta {
@@ -472,8 +477,8 @@ a {
     text-align: left;
     padding: 0.7rem 0.8rem;
     border-radius: 0.8rem;
-    letter-spacing: 0.08em;
-    font-size: 0.82rem;
+    letter-spacing: 0.035em;
+    font-size: 0.8125rem;
   }
 
   .nav--broker .nav-cta {
@@ -546,8 +551,9 @@ a {
   color: var(--ink-muted);
   max-width: 40ch;
   margin: 0 0 2rem;
-  font-size: 1.03rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.74;
+  letter-spacing: -0.01em;
 }
 
 .btn {
@@ -557,9 +563,9 @@ a {
   padding: 0.92rem 1.65rem;
   border-radius: var(--btn-radius);
   font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s,
     border-color 0.28s, background 0.28s;
@@ -632,8 +638,8 @@ a {
 .btn--hero-contact {
   background: var(--garnet);
   color: #fff;
-  letter-spacing: 0.14em;
-  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  font-size: 0.72rem;
   padding: 1rem 1.75rem;
   box-shadow: 0 16px 40px rgba(var(--garnet-rgb), 0.28);
 }
@@ -819,31 +825,33 @@ body.home-page .hero-split__copy {
 
 .hero-split h1 {
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(2.75rem, 5.25vw + 0.65rem, 4.85rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-size: clamp(2.65rem, 5.05vw + 0.62rem, 4.65rem);
+  line-height: 1.11;
+  letter-spacing: -0.028em;
   margin: 0 0 clamp(1.65rem, 3.5vw, 2.35rem);
   color: var(--ink);
+  text-wrap: balance;
 }
 
 .hero-split__dek {
   margin: 0 0 1.45rem;
   max-width: 42ch;
-  font-size: clamp(1.02rem, 1vw + 0.94rem, 1.125rem);
-  line-height: 1.82;
-  color: rgba(var(--velvet-rgb), 0.85);
+  font-size: clamp(0.98rem, 0.75vw + 0.9rem, 1.08rem);
+  line-height: 1.8;
+  letter-spacing: -0.013em;
+  color: rgba(var(--velvet-rgb), 0.82);
   margin-inline: 0;
 }
 
 .hero-split__stat-line {
   margin: 2.1rem 0 0;
   font-family: var(--font-body);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--mustard-ink);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: rgba(var(--velvet-rgb), 0.72);
 }
 
 .hero-split__actions {
