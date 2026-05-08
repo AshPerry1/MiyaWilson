@@ -4,7 +4,7 @@
     REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   } catch (e) {}
 
-  var BOT_NAME = "Home concierge";
+  var BOT_NAME = "Ruby";
 
   var PROMPTS = [
     {
@@ -122,7 +122,8 @@
     bubble(label, "user");
 
     var typingRow = typingIndicator();
-    delay(REDUCE_MOTION ? 0 : 1000, function () {
+    var responseDelay = REDUCE_MOTION ? 0 : 2200 + Math.floor(Math.random() * 1200);
+    delay(responseDelay, function () {
       removeTyping(typingRow);
       bubble(answerFor(id), "bot");
       chipsEl.querySelectorAll(".site-chat__chip").forEach(function (c) {
@@ -172,11 +173,12 @@
     var head = document.createElement("header");
     head.className = "site-chat__head";
     head.innerHTML =
+      '<div class="site-chat__avatar" aria-hidden="true">☺</div>' +
       '<div class="site-chat__head-text">' +
       '<p class="site-chat__kicker" id="site-chat-title">' +
       BOT_NAME +
       "</p>" +
-      '<p class="site-chat__sub">Tap a prompt below for instant answers. This is scripted on-page, not a live AI chat.</p>' +
+      '<p class="site-chat__sub">Ask me anything about Move Wise.</p>' +
       "</div>";
 
     var closeBtn = document.createElement("button");
@@ -196,14 +198,9 @@
     chipsEl.className = "site-chat__chips";
     chipsEl.addEventListener("click", onChipClick);
 
-    var foot = document.createElement("p");
-    foot.className = "site-chat__foot";
-    foot.textContent = "Replies are scripted for this site—no AI or backend connected.";
-
     panel.appendChild(head);
     panel.appendChild(messagesEl);
     panel.appendChild(chipsEl);
-    panel.appendChild(foot);
 
     root.appendChild(toggleBtn);
     root.appendChild(panel);
@@ -226,7 +223,7 @@
     });
 
     bubble(
-      "Hi—tap a topic below for quick answers about Move Wise. Everything here is scripted on the page—no AI chat behind it.",
+      "Hi, I am Ruby. Tap a topic below and I will help you quickly.",
       "bot"
     );
     renderChips();
