@@ -39,9 +39,9 @@
     },
     {
       id: "tour",
-      label: "Walk me through the site",
+      label: "How do I navigate quickly?",
       reply:
-        "On the homepage, tap “Take a home tour” for a short guided walk through the page. It’s scripted, not AI—just a fast orientation.",
+        "Use the top navigation to jump straight to About, Kits, and core homepage sections. If you want a fast overview, start with Projects and then Contact.",
     },
   ];
 
