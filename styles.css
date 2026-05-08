@@ -1436,16 +1436,14 @@ body.faq-page-view #main-content {
 }
 
 .faq-shell {
-  max-width: min(38rem, 100%);
-  margin: clamp(1.15rem, 3.5vw, 1.85rem) auto 0;
-  padding: clamp(1.4rem, 3.8vw, 2.15rem) clamp(1.2rem, 4vw, 2rem) clamp(3rem, 7vw, 4.75rem);
-  background: rgba(253, 250, 245, 0.94);
-  border: 1px solid rgba(var(--ink-rgb), 0.11);
-  border-left: 3px solid var(--mustard);
-  border-radius: var(--radius);
-  box-shadow:
-    0 22px 56px rgba(var(--velvet-rgb), 0.09),
-    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(0.35rem, 1.5vw, 0.75rem) 0 clamp(3rem, 7vw, 4.75rem);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .faq-group {
@@ -1480,7 +1478,7 @@ body.faq-page-view #main-content {
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.15rem 0 1.15rem;
+  padding: 1.2rem clamp(1rem, 5vw, 3.25rem) 1.2rem;
   font-family: var(--font-display);
   font-size: clamp(0.78rem, 1.1vw, 0.88rem);
   font-weight: 600;
@@ -1527,7 +1525,7 @@ body.faq-page-view #main-content {
 }
 
 .faq-item__body {
-  padding: 0 0 1.2rem;
+  padding: 0 clamp(1rem, 5vw, 3.25rem) 1.2rem;
   font-family: var(--font-body);
   font-size: clamp(0.9rem, 0.3vw + 0.85rem, 1rem);
   font-weight: 400;
