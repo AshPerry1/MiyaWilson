@@ -1549,7 +1549,7 @@ body.home-page .hero-split__copy {
 }
 
 .coaching-hub__inner h1 {
-  margin: 0 0 0.85rem;
+  margin: 0 0 1.25rem;
   font-family: var(--font-display);
   font-size: clamp(2.1rem, 4.5vw, 2.85rem);
   font-weight: 500;
@@ -1557,65 +1557,14 @@ body.home-page .hero-split__copy {
   color: var(--ink);
 }
 
-.coaching-hub__dek {
-  margin: 0 0 2.25rem;
+.coaching-hub__soon {
+  margin: 0;
   font-family: var(--font-body);
-  font-size: clamp(1rem, 0.5vw + 0.94rem, 1.08rem);
-  line-height: 1.65;
-  color: rgba(var(--velvet-rgb), 0.82);
-}
-
-.coaching-hub__list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  max-width: 22rem;
-  text-align: center;
-}
-
-.coaching-hub__link {
-  display: block;
-  padding: 0.9rem 1.25rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--ink);
-  text-decoration: none;
-  border: 1px solid rgba(var(--ink-rgb), 0.14);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 8px 28px rgba(var(--velvet-rgb), 0.06);
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.coaching-hub__link:hover {
-  border-color: rgba(var(--garnet-rgb), 0.35);
-  color: var(--garnet);
-  box-shadow: 0 12px 36px rgba(var(--velvet-rgb), 0.1);
-}
-
-.coaching-hub__note {
-  margin: 2rem 0 0;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: var(--ink-muted);
-}
-
-.coaching-hub__note a {
-  color: var(--garnet);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-.coaching-hub__note a:hover {
-  color: var(--ink);
+  font-size: clamp(1.05rem, 1.2vw + 0.95rem, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(var(--velvet-rgb), 0.7);
 }
 
 body.coming-soon-view #main-content {
@@ -1672,12 +1621,6 @@ body.coming-soon-view #main-content {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(var(--velvet-rgb), 0.7);
-}
-
-@media (max-width: 760px) {
-  .coaching-hub__list {
-    max-width: none;
-  }
 }
 
 /* —— FAQ page (brand · warm layers · accent rail + list) —— */
