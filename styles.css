@@ -213,7 +213,7 @@ a {
 
 .header-inner--broker {
   position: relative;
-  padding: 1.15rem 0;
+  padding: 0.72rem 0;
 }
 
 /* Logo: monogram + stacked sans (reference layout) */
@@ -256,9 +256,9 @@ a {
 
 .logo__brand-img {
   display: block;
-  height: clamp(88px, 10vw, 116px);
+  height: clamp(68px, 8.1vw, 92px);
   width: auto;
-  max-width: min(214px, 45vw);
+  max-width: min(176px, 38vw);
   object-fit: contain;
 }
 
@@ -407,7 +407,7 @@ a {
 
 .nav-cta--broker {
   font-size: 0.8rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.62rem 1.25rem;
 }
 
 .nav-cta:hover {
@@ -424,7 +424,7 @@ a {
 
 @media (max-width: 900px) {
   .header-inner--broker {
-    padding: 0.85rem 0;
+    padding: 0.62rem 0;
   }
 
   .nav--broker {
@@ -498,8 +498,8 @@ a {
   }
 
   .logo__brand-img {
-    height: 66px;
-    max-width: 126px;
+    height: 54px;
+    max-width: 102px;
   }
 
   .nav-cta {
