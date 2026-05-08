@@ -769,6 +769,7 @@ a {
   background: var(--cream);
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   padding: clamp(1.8rem, 4.2vw, 3.2rem) clamp(2rem, 8vw, 5rem)
     clamp(2.6rem, 6vw, 4.1rem);
   border-right: 1px solid rgba(var(--garnet-rgb), 0.08);
@@ -776,6 +777,7 @@ a {
 
 .hero-split__copy-inner {
   width: min(43rem, 100%);
+  margin-inline: auto;
 }
 
 .hero-split__ribbon {
