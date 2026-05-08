@@ -200,6 +200,8 @@ a {
 }
 
 .site-header--broker {
+  position: relative;
+  z-index: 50;
   background: var(--cream);
   backdrop-filter: none;
   border-bottom-color: transparent;
@@ -360,6 +362,117 @@ a {
   font-weight: 500;
   letter-spacing: 0.035em;
   text-transform: none;
+  align-items: center;
+}
+
+/* Agent coaching · hover / focus submenu (desktop) */
+.nav-dropdown {
+  position: relative;
+  display: block;
+}
+
+.nav-dropdown__label {
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-dropdown__label:hover,
+.nav-dropdown:hover .nav-dropdown__label {
+  color: var(--garnet);
+}
+
+.nav-dropdown__panel {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+}
+
+.nav-dropdown__panel a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+  border-radius: 0.35rem;
+}
+
+.nav-dropdown__panel a:hover {
+  color: var(--garnet);
+  background: rgba(var(--mustard-rgb), 0.12);
+}
+
+.nav-dropdown:has(.nav-dropdown__panel a.nav-current) .nav-dropdown__label {
+  color: var(--accent);
+}
+
+@media (min-width: 721px) {
+  .nav-dropdown__panel {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.25rem);
+    transform: translateX(-50%);
+    min-width: 13.75rem;
+    background: #fff;
+    border: 1px solid rgba(var(--ink-rgb), 0.1);
+    border-radius: 0.55rem;
+    box-shadow:
+      0 14px 40px rgba(var(--velvet-rgb), 0.12),
+      0 2px 8px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      transform 0.2s ease;
+    z-index: 100;
+  }
+
+  .nav-dropdown:hover .nav-dropdown__panel,
+  .nav-dropdown:focus-within .nav-dropdown__panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-dropdown__label {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.8rem;
+  }
+
+  .nav-dropdown__panel {
+    padding: 0.15rem 0 0.35rem 0.85rem;
+    margin: -0.15rem 0 0.15rem 0.35rem;
+    border-left: 2px solid rgba(var(--mustard-rgb), 0.42);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .nav-dropdown__panel a {
+    padding: 0.45rem 0.65rem;
+    border-radius: 0.55rem;
+    white-space: normal;
+    font-size: 0.76rem;
+  }
 }
 
 .nav-toggle {
@@ -393,10 +506,16 @@ a {
 }
 
 .nav-current,
-.nav a.nav-current {
+.nav a.nav-current,
+.nav-dropdown__label.nav-current {
   color: var(--accent) !important;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.nav-dropdown__panel a.nav-current {
+  color: var(--accent) !important;
+  font-weight: 600;
 }
 
 .nav-cta {
