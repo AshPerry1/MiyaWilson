@@ -35,7 +35,7 @@
       id: "contact",
       label: "How do I reach you?",
       reply:
-        "Email hello@movewellhome.com from the utility bar or the contact section. That’s the line we watch for real conversations about real houses.",
+        "Email Miya.Wilson@outlook.com from the utility bar or the contact section. That’s the line we watch for real conversations about real houses.",
     },
     {
       id: "tour",
