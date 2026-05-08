@@ -2269,8 +2269,23 @@ body.faq-page-view #main-content {
   color: rgba(var(--mustard-rgb), 0.95);
 }
 
+.footer-disclaimer {
+  padding: 1.1rem 0 0.35rem;
+  margin-top: 0.35rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-disclaimer__text {
+  margin: 0 auto;
+  max-width: min(52rem, 100%);
+  font-size: 0.76rem;
+  line-height: 1.65;
+  color: rgba(241, 234, 224, 0.58);
+}
+
 .footer-bottom {
-  margin-top: 0.9rem;
+  margin-top: 0.5rem;
   padding-top: 0.95rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   display: flex;
@@ -2317,6 +2332,10 @@ body.faq-page-view #main-content {
     white-space: normal;
     text-align: center;
     letter-spacing: 0.12em;
+  }
+
+  .footer-disclaimer {
+    text-align: center;
   }
 }
 
