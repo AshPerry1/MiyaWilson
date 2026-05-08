@@ -138,9 +138,7 @@ a {
 
 /* —— Top dock (broker reference: utility strip + navigation) —— */
 .site-top {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative;
   padding-left: env(safe-area-inset-left, 0px);
   padding-right: env(safe-area-inset-right, 0px);
 }
