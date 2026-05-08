@@ -872,7 +872,7 @@ a {
   width: clamp(340px, 44vw, 620px);
   height: auto;
   max-height: min(66vh, 460px);
-  left: 52%;
+  left: 58%;
   top: 54%;
   bottom: auto;
   min-height: 0;
