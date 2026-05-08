@@ -1404,6 +1404,163 @@ body.home-page .hero-split__copy {
   margin: 0;
 }
 
+/* —— Agent coaching hub & coming-soon subpages —— */
+.coaching-hub {
+  padding: clamp(3.5rem, 9vw, 5.25rem) 0 clamp(4rem, 10vw, 6rem);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(var(--garnet-rgb), 0.05), transparent 50%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--cream) 42%, #f3ebe1 100%);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
+}
+
+.coaching-hub__inner {
+  max-width: 38rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.coaching-hub__eyebrow {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--garnet);
+}
+
+.coaching-hub__inner h1 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4.5vw, 2.85rem);
+  font-weight: 500;
+  line-height: 1.12;
+  color: var(--ink);
+}
+
+.coaching-hub__dek {
+  margin: 0 0 2.25rem;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.5vw + 0.94rem, 1.08rem);
+  line-height: 1.65;
+  color: rgba(var(--velvet-rgb), 0.82);
+}
+
+.coaching-hub__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 22rem;
+  text-align: center;
+}
+
+.coaching-hub__link {
+  display: block;
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid rgba(var(--ink-rgb), 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 28px rgba(var(--velvet-rgb), 0.06);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.coaching-hub__link:hover {
+  border-color: rgba(var(--garnet-rgb), 0.35);
+  color: var(--garnet);
+  box-shadow: 0 12px 36px rgba(var(--velvet-rgb), 0.1);
+}
+
+.coaching-hub__note {
+  margin: 2rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.coaching-hub__note a {
+  color: var(--garnet);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.coaching-hub__note a:hover {
+  color: var(--ink);
+}
+
+body.coming-soon-view #main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fbf6ef 0%, var(--cream) 55%, #f0ebe4 100%);
+}
+
+.coming-soon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(3.5rem, 12vw, 6rem) 1rem;
+  min-height: min(62vh, 520px);
+}
+
+.coming-soon__crumb {
+  margin: 0 0 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.coming-soon__crumb a {
+  color: var(--garnet);
+  text-decoration: none;
+}
+
+.coming-soon__crumb a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.coming-soon__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.coming-soon__message {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.2vw + 0.95rem, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(var(--velvet-rgb), 0.7);
+}
+
+@media (max-width: 760px) {
+  .coaching-hub__list {
+    max-width: none;
+  }
+}
+
 /* —— FAQ page (brand · warm layers · accent rail + list) —— */
 body.faq-page-view #main-content {
   background:
@@ -1704,6 +1861,23 @@ body.faq-page-view #main-content {
   font-weight: 700;
   color: var(--garnet);
   letter-spacing: 0.03em;
+}
+
+.kits-card__more {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.kits-card__more a {
+  color: var(--garnet);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--garnet-rgb), 0.35);
+}
+
+.kits-card__more a:hover {
+  color: var(--ink);
+  border-bottom-color: rgba(var(--ink-rgb), 0.35);
 }
 
 .kits-coaching {

@@ -41,7 +41,7 @@
       id: "tour",
       label: "How do I navigate quickly?",
       reply:
-        "Use the top navigation for Agent coaching and resources, Buying/selling a home, About, and FAQ. Coaching and resources open on the Kits page; the rest are their own pages.",
+        "Use the top navigation: Agent coaching opens the coaching hub (1-on-1, group, VIP pages), Agent resources opens the Kits page, plus Buying/selling, About, and FAQ.",
     },
   ];
 
