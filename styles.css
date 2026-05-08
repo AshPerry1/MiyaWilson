@@ -36,6 +36,10 @@
   --paper-dark: var(--cream-soft);
   --paper-rgb: 241, 240, 238;
   --white: #f7f6f4;
+  /* Coaching / placeholder pages · light warm elephant grey (not cream) */
+  --elephant: #e9e7e4;
+  --elephant-mid: #e2dfdb;
+  --elephant-deep: #d9d6d1;
   /* Type on dark cranberry panels */
   --cream-rgb: 248, 244, 235;
 
@@ -1524,11 +1528,26 @@ body.home-page .hero-split__copy {
 }
 
 /* —— Agent coaching hub & coming-soon subpages —— */
+body.coaching-surface {
+  background: linear-gradient(180deg, var(--elephant) 0%, var(--elephant-deep) 92%);
+}
+
+body.coaching-surface .site-header--broker {
+  background: color-mix(in srgb, var(--elephant) 88%, white);
+  box-shadow:
+    inset 0 -1px 0 rgba(var(--ink-rgb), 0.07),
+    inset 0 -3px 0 rgba(var(--mustard-rgb), 0.16);
+}
+
+@supports not (color: color-mix(in srgb, black, white)) {
+  body.coaching-surface .site-header--broker {
+    background: #ebe9e6;
+  }
+}
+
 .coaching-hub {
   padding: clamp(3.5rem, 9vw, 5.25rem) 0 clamp(4rem, 10vw, 6rem);
-  background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(var(--garnet-rgb), 0.05), transparent 50%),
-    linear-gradient(180deg, #fbf6ef 0%, var(--cream) 42%, #f3ebe1 100%);
+  background: radial-gradient(ellipse 82% 58% at 50% -12%, rgba(var(--garnet-rgb), 0.045), transparent 52%);
   border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
 }
 
@@ -1571,7 +1590,7 @@ body.coming-soon-view #main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #fbf6ef 0%, var(--cream) 55%, #f0ebe4 100%);
+  background: transparent;
 }
 
 .coming-soon {
