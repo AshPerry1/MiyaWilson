@@ -836,6 +836,7 @@ a {
   position: relative;
   min-height: min(92vh, 860px);
   background: var(--velvet-forest);
+  overflow: visible;
 }
 
 .hero-split__figure {
@@ -863,16 +864,18 @@ a {
 
 .hero-split__img--pop {
   position: absolute;
-  width: clamp(280px, 62%, 640px);
+  width: clamp(320px, 64%, 680px);
   height: auto;
   max-height: min(66vh, 460px);
-  right: clamp(1.2rem, 5vw, 4.25rem);
+  left: 24%;
   bottom: clamp(1.2rem, 5vw, 4.5rem);
   min-height: 0;
   object-fit: cover;
   border: 2px solid rgba(245, 245, 245, 0.6);
   box-shadow: 0 28px 55px rgba(6, 7, 11, 0.5);
   filter: saturate(1.08);
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 @media (max-width: 900px) {
@@ -892,10 +895,10 @@ a {
 
   .hero-split__img--pop {
     width: min(78%, 540px);
-    right: 50%;
+    left: 50%;
     bottom: 1.1rem;
     max-height: min(48vh, 340px);
-    transform: translateX(50%);
+    transform: translateX(-50%);
   }
 
   .hero-split__overlap-brand {
