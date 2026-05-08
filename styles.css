@@ -872,8 +872,8 @@ a {
   width: clamp(320px, 64%, 680px);
   height: auto;
   max-height: min(66vh, 460px);
-  left: 50%;
-  bottom: clamp(1.2rem, 5vw, 4.5rem);
+  left: 0;
+  bottom: clamp(0.9rem, 3.2vw, 2.2rem);
   min-height: 0;
   object-fit: cover;
   border: 2px solid rgba(245, 245, 245, 0.6);
