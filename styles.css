@@ -1378,6 +1378,57 @@ a {
   margin: 0;
 }
 
+/* —— FAQ page —— */
+.faq-page__topics {
+  padding: clamp(2rem, 5vw, 3rem) 0 clamp(3.25rem, 7vw, 4.75rem);
+  max-width: min(40rem, 100%);
+}
+
+.faq-topic {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.1);
+}
+
+.faq-topic:first-child {
+  border-top: 1px solid rgba(var(--ink-rgb), 0.1);
+}
+
+.faq-topic__q {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.25vw + 0.85rem, 1.28rem);
+  font-weight: 600;
+  color: var(--garnet);
+  margin: 0 0 0.7rem;
+  line-height: 1.38;
+}
+
+.faq-topic__a {
+  color: rgba(var(--velvet-rgb), 0.9);
+  font-size: clamp(0.94rem, 0.35vw + 0.89rem, 1.03rem);
+  line-height: 1.74;
+}
+
+.faq-topic__a p {
+  margin: 0 0 0.65rem;
+}
+
+.faq-topic__a p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-topic__a ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.faq-topic__a li {
+  margin: 0.4rem 0;
+}
+
+.faq-topic__a li::marker {
+  color: rgba(var(--garnet-rgb), 0.55);
+}
+
 /* —— Kits teaser (homepage) —— */
 .kits-teaser {
   padding: clamp(3rem, 7vw, 4.75rem) 0;
