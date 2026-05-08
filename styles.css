@@ -873,13 +873,14 @@ a {
   height: auto;
   max-height: min(66vh, 460px);
   left: 50%;
-  bottom: clamp(0.9rem, 3.2vw, 2.2rem);
+  top: 58%;
+  bottom: auto;
   min-height: 0;
   object-fit: cover;
   border: 2px solid rgba(245, 245, 245, 0.6);
   box-shadow: 0 28px 55px rgba(6, 7, 11, 0.5);
   filter: saturate(1.08);
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 4;
   pointer-events: none;
 }
@@ -902,6 +903,7 @@ a {
   .hero-split__img--pop {
     width: min(78%, 540px);
     left: 50%;
+    top: auto;
     bottom: 1.1rem;
     max-height: min(48vh, 340px);
     transform: translateX(-50%);
