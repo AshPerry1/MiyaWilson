@@ -2269,24 +2269,6 @@ body.faq-page-view #main-content {
   color: rgba(var(--mustard-rgb), 0.95);
 }
 
-.footer-wordmark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0 0.15rem;
-}
-
-.footer-wordmark__img {
-  display: block;
-  height: clamp(1rem, 2.5vw, 1.35rem);
-  width: auto;
-  max-width: min(14rem, 92%);
-  object-fit: contain;
-  opacity: 0.9;
-  /* Black wordmark PNG → warm light mark on dark footer */
-  filter: invert(1) brightness(1.06);
-}
-
 .footer-bottom {
   margin-top: 0.9rem;
   padding-top: 0.95rem;

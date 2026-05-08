@@ -29,7 +29,7 @@ jobs:
         run: |
           mkdir -p _site _site/assets
           cp index.html about.html kits.html faq.html buying-selling.html styles.css lux-motion.js site-chat.js mobile-nav.js _site/
-          cp assets/logo-movewise.png assets/miya-about.png assets/miya-home.png assets/chrome-wordmark.png _site/assets/
+          cp assets/logo-movewise.png assets/miya-about.png assets/miya-home.png _site/assets/
           test -f .nojekyll && cp .nojekyll _site/ || touch _site/.nojekyll
 
       - name: Configure Pages
