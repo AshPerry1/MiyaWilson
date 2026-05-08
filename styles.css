@@ -869,11 +869,11 @@ a {
 
 .hero-split__img--pop {
   position: absolute;
-  width: clamp(280px, 38vw, 520px);
+  width: clamp(340px, 44vw, 620px);
   height: auto;
   max-height: min(66vh, 460px);
   left: 52%;
-  top: 58%;
+  top: 54%;
   bottom: auto;
   min-height: 0;
   object-fit: cover;
