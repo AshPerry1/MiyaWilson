@@ -41,7 +41,7 @@
       id: "tour",
       label: "How do I navigate quickly?",
       reply:
-        "Use the top navigation: Agent coaching opens the coaching hub (1-on-1, group, VIP pages), Agent resources opens the Kits page, plus Buying/selling, About, and FAQ.",
+        "Use the top navigation: hover Agent coaching for 1-on-1, group, and VIP pages, or open the coaching section on Kits. Agent resources is the tools page; also Buying/selling, About, and FAQ.",
     },
   ];
 

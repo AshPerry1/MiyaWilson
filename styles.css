@@ -1527,7 +1527,7 @@ body.home-page .hero-split__copy {
   margin: 0;
 }
 
-/* —— Agent coaching hub & coming-soon subpages —— */
+/* —— Coaching track pages (coming soon) · elephant grey surface —— */
 body.coaching-surface {
   background: linear-gradient(180deg, var(--elephant) 0%, var(--elephant-deep) 92%);
 }
@@ -1543,47 +1543,6 @@ body.coaching-surface .site-header--broker {
   body.coaching-surface .site-header--broker {
     background: #ebe9e6;
   }
-}
-
-.coaching-hub {
-  padding: clamp(3.5rem, 9vw, 5.25rem) 0 clamp(4rem, 10vw, 6rem);
-  background: radial-gradient(ellipse 82% 58% at 50% -12%, rgba(var(--garnet-rgb), 0.045), transparent 52%);
-  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
-}
-
-.coaching-hub__inner {
-  max-width: 38rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.coaching-hub__eyebrow {
-  margin: 0 0 0.85rem;
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--garnet);
-}
-
-.coaching-hub__inner h1 {
-  margin: 0 0 1.25rem;
-  font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4.5vw, 2.85rem);
-  font-weight: 500;
-  line-height: 1.12;
-  color: var(--ink);
-}
-
-.coaching-hub__soon {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: clamp(1.05rem, 1.2vw + 0.95rem, 1.2rem);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(var(--velvet-rgb), 0.7);
 }
 
 body.coming-soon-view #main-content {
