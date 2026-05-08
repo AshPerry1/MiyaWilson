@@ -56,7 +56,7 @@
 
   /* Rules / hairlines: mustard-forward */
   --lux-line: var(--mustard);
-  --btn-radius: 0;
+  --btn-radius: 999px;
   --radius: 10px;
   --radius-lg: 18px;
   --shadow: 0 32px 64px rgba(var(--velvet-rgb), 0.14);
