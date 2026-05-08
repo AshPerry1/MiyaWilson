@@ -60,8 +60,8 @@
   --radius: 10px;
   --radius-lg: 18px;
   --shadow: 0 32px 64px rgba(var(--velvet-rgb), 0.14);
-  --font-display: "Libre Baskerville", Georgia, serif;
-  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Outfit", system-ui, sans-serif;
   --max: 1140px;
 }
 
@@ -825,7 +825,7 @@ body.home-page .hero-split__copy {
 
 .hero-split h1 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(2.65rem, 5.05vw + 0.62rem, 4.65rem);
   line-height: 1.11;
   letter-spacing: -0.028em;
