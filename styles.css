@@ -879,7 +879,7 @@ a {
   border: 2px solid rgba(245, 245, 245, 0.6);
   box-shadow: 0 28px 55px rgba(6, 7, 11, 0.5);
   filter: saturate(1.08);
-  transform: translateX(-58%);
+  transform: translateX(calc(-50% - 2.25rem));
   z-index: 2;
 }
 
