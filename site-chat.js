@@ -50,7 +50,10 @@
   var messagesEl;
   var chipsEl;
   var toggleBtn;
+  var nudgeBtn;
+  var nudgeTimer;
   var open = false;
+  var NUDGE_SESSION_KEY = "mwChatInviteShown";
 
   function delay(ms, fn) {
     if (REDUCE_MOTION) return fn();
@@ -132,11 +135,51 @@
     });
   }
 
+  function clearNudgeTimer() {
+    if (nudgeTimer) {
+      window.clearTimeout(nudgeTimer);
+      nudgeTimer = null;
+    }
+  }
+
+  function hideNudge() {
+    if (!nudgeBtn) return;
+    nudgeBtn.hidden = true;
+    nudgeBtn.setAttribute("aria-hidden", "true");
+  }
+
+  function markNudgeConsumed() {
+    try {
+      window.sessionStorage.setItem(NUDGE_SESSION_KEY, "1");
+    } catch (e) {}
+    clearNudgeTimer();
+    hideNudge();
+  }
+
+  function showNudgeIfEligible() {
+    if (open) return;
+    try {
+      if (window.sessionStorage.getItem(NUDGE_SESSION_KEY)) return;
+    } catch (e) {}
+    if (!nudgeBtn) return;
+    nudgeBtn.hidden = false;
+    nudgeBtn.setAttribute("aria-hidden", "false");
+    try {
+      window.sessionStorage.setItem(NUDGE_SESSION_KEY, "1");
+    } catch (e) {}
+  }
+
+  function scheduleNudgeInvite() {
+    clearNudgeTimer();
+    nudgeTimer = window.setTimeout(showNudgeIfEligible, 3000);
+  }
+
   function setOpen(isOpen) {
     open = isOpen;
     panel.hidden = !isOpen;
     toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
     if (open) {
+      markNudgeConsumed();
       delay(0, function () {
         var first = panel.querySelector(".site-chat__close, .site-chat__chip");
         if (first) first.focus();
@@ -161,6 +204,19 @@
       '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">' +
       '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 7.5 7.5 0 0 1 .6-3h.1a8.48 8.48 0 0 1 8.1-6 8.64 8.64 0 0 1 8.3 6.2z"/>' +
       "</svg></span><span class=\"visually-hidden\">Open quick answers</span>";
+
+    nudgeBtn = document.createElement("button");
+    nudgeBtn.type = "button";
+    nudgeBtn.className = "site-chat__nudge";
+    nudgeBtn.hidden = true;
+    nudgeBtn.setAttribute("aria-hidden", "true");
+    nudgeBtn.setAttribute("aria-label", "Have questions? Open chat with Ruby");
+    nudgeBtn.textContent = "Have questions? Tap to chat with Ruby.";
+
+    var fabWrap = document.createElement("div");
+    fabWrap.className = "site-chat__fab-wrap";
+    fabWrap.appendChild(toggleBtn);
+    fabWrap.appendChild(nudgeBtn);
 
     panel = document.createElement("div");
     panel.id = "site-chat-panel";
@@ -202,9 +258,14 @@
     panel.appendChild(messagesEl);
     panel.appendChild(chipsEl);
 
-    root.appendChild(toggleBtn);
+    root.appendChild(fabWrap);
     root.appendChild(panel);
     document.body.appendChild(root);
+
+    nudgeBtn.addEventListener("click", function () {
+      markNudgeConsumed();
+      setOpen(true);
+    });
 
     toggleBtn.addEventListener("click", function () {
       setOpen(!open);
@@ -227,6 +288,7 @@
       "bot"
     );
     renderChips();
+    scheduleNudgeInvite();
   }
 
   if (document.readyState === "loading") {
