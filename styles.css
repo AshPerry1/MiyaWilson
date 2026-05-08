@@ -6,7 +6,7 @@
 }
 
 :root {
-  /* Brand: cream surfaces · cranberry + mustard accents */
+  /* Brand: cream surfaces · deep luxury red + mustard accents */
   --cream: #faf7ef;
   --cream-soft: #f2ebe0;
   --cream-muted: #e8dfd2;
@@ -24,11 +24,11 @@
   --brass-face: #8a7b68;
   --brass-hi: #a89882;
   --dust: #75656c;
-  --garnet: #c44159;
-  --garnet-rgb: 196, 65, 89;
-  /* Deep cranberry-wine for type + photo rails (lighter than previous brown-garnet) */
-  --velvet-forest: #5c3d48;
-  --velvet-rgb: 92, 61, 72;
+  --garnet: #8f1d35;
+  --garnet-rgb: 143, 29, 53;
+  /* Deep wine red for type + photo rails */
+  --velvet-forest: #512330;
+  --velvet-rgb: 81, 35, 48;
 
   --canvas: var(--cream);
   --canvas-deep: var(--cream-soft);
