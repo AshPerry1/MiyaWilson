@@ -233,7 +233,7 @@ a {
 .logo--broker {
   flex-direction: row;
   align-items: center;
-  gap: 0;
+  gap: clamp(0.5rem, 1.2vw, 0.85rem);
   text-decoration: none;
 }
 
@@ -276,6 +276,18 @@ a {
   font-size: 1rem;
   letter-spacing: 0.03em;
   text-transform: none;
+}
+
+.logo--broker .logo__stack {
+  gap: 0;
+}
+
+.logo--broker .logo__name {
+  font-size: clamp(1rem, 2.2vw, 1.85rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  white-space: nowrap;
+  color: var(--ink);
 }
 
 .logo__line2 {
@@ -422,6 +434,10 @@ a {
 }
 
 @media (max-width: 720px) {
+  .logo--broker .logo__name {
+    font-size: clamp(0.9rem, 3.5vw, 1.05rem);
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -474,7 +490,7 @@ a {
   }
 
   .logo--broker {
-    gap: 0;
+    gap: 0.4rem;
   }
 
   .logo__brand-img {
