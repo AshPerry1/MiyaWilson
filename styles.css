@@ -13,16 +13,16 @@
   /* Legacy names map to cream (avoid yellow “mustard wash” backgrounds) */
   --eggnog: var(--cream);
   --eggnog-deep: var(--cream-soft);
-  --mustard: #ccb363;
-  --mustard-rgb: 204, 179, 99;
-  --mustard-ink: #927825;
-  --copper: #c27e35;
-  --copper-rgb: 194, 126, 53;
+  --mustard: #aa9786;
+  --mustard-rgb: 170, 151, 134;
+  --mustard-ink: #6f6156;
+  --copper: #978372;
+  --copper-rgb: 151, 131, 114;
   /* CTA brass (muted metallic — not hi-viz mustard) */
-  --brass-shadow: #4a433c;
-  --brass-deep: #5f564a;
-  --brass-face: #8a7b68;
-  --brass-hi: #a89882;
+  --brass-shadow: #5c5248;
+  --brass-deep: #72665a;
+  --brass-face: #9a8b7b;
+  --brass-hi: #b7a997;
   --dust: #75656c;
   --garnet: #8f1d35;
   --garnet-rgb: 143, 29, 53;
